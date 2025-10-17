@@ -1,82 +1,34 @@
-# Taiki Papandreou's Personal Portfolio
+# Hi there, I'm Taiki Papandreou 👋
 
-A clean, modern single-page portfolio website built for job applications and professional networking.
+## 🚀 About Me
+- 🎓 Currently pursuing my MSc in AI at University of Amsterdam
+- 🤖 AI Engineer & Machine Learning Specialist
+- 🌍 Based in Netherlands, available for opportunities worldwide
+- 🗣️ Fluent in English, Japanese, and Dutch
+- 🔍 Actively seeking exciting opportunities starting September 2025
 
-## 🌟 Features
+## 💻 Tech Stack
+**AI & Machine Learning:**
+- Python, Machine Learning, NLP
+- OpenAI/LLMs, BERT/RoBERTa, RAG Systems
+- TensorFlow, PyTorch
 
-- **Single-Page Design**: Smooth scrolling navigation with all content on one page
-- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Three Main Sections**:
-  - **About**: Personal introduction and skills showcase
-  - **Projects**: Portfolio of development work with tech stacks
-  - **Contact**: Contact information and functional contact form
-- **Optional Blog**: Separate page for blog posts (if needed)
+**Development:**
+- FastAPI, Streamlit, HTML/CSS
+- R, SQL, Git
 
-## 🚀 Tech Stack
+## 🌟 What I Do
+I specialize in building AI-powered solutions that solve real-world problems. My experience spans from chatbots to content generation platforms, with a passion for creating technology that's accessible and impactful.
 
-- **HTML5**: Semantic, accessible markup
-- **CSS3**: Modern styling with Flexbox and Grid
-- **Vanilla JavaScript**: Clean, lightweight interactions
-- **Google Fonts**: Inter font family for typography
+## 📫 Let's Connect
+- 📧 Email: [taiki.papandreou@gmail.com](mailto:taiki.papandreou@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/taiki-papandreou-lazos](https://linkedin.com/in/taiki-papandreou-lazos-a341981b5/)
+- 🌐 Portfolio: [taikilazos.github.io/personal-page](https://taikilazos.github.io/personal-page)
 
-## 📁 Project Structure
+## 📊 GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=TaikiLazos&show_icons=true&theme=default&hide_border=true)
 
-```
-personal-page/
-├── index.html          # About and Contact sections
-├── projects.html       # Portfolio showcase
-├── blog.html          # Blog posts (optional)
-├── styles.css          # All CSS styling
-├── script.js           # JavaScript functionality
-├── photo.jpg           # Your profile photo
-└── README.md          # Documentation
-```
-
-## 🔧 Customization
-
-### Personal Information
-Update the following in the HTML files:
-- Replace "Taiki Papandreou" with your name
-- Update the hero description and about text
-- Add your actual email, LinkedIn, and GitHub links
-- Customize the skills tags to match your expertise
-
-### Projects
-Replace the placeholder projects in `projects.html` with your actual work:
-- Add real project screenshots to replace placeholders
-- Update project titles, descriptions, and tech stacks
-- Link to your live demos and GitHub repositories
-
-### Blog Posts
-Add your actual blog content or remove the blog section if not needed.
-
-### Styling
-The color scheme and styling can be customized in `styles.css`:
-- Primary color: `#2563eb` (blue)
-- Background: `#fafafa` (light gray)
-- Text: Various shades of gray for hierarchy
-
-## 📱 GitHub Pages Deployment
-
-1. **Push to GitHub**: Make sure all files are committed and pushed to your repository
-2. **Enable Pages**: Go to Settings > Pages in your GitHub repository
-3. **Select Source**: Choose "Deploy from a branch" and select "main" branch
-4. **Custom Domain (Optional)**: Add your custom domain if you have one
-
-Your site will be available at: `https://yourusername.github.io/personal-page`
-
-## 🎨 Design Philosophy
-
-- **Simplicity**: Clean, uncluttered design that focuses on content
-- **Professionalism**: Suitable for job applications and professional networking
-- **Accessibility**: Semantic HTML and good contrast ratios
-- **Performance**: Lightweight with no external dependencies except Google Fonts
-
-## 📄 License
-
-Feel free to use this template for your own portfolio! No attribution required.
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=TaikiLazos&layout=compact&theme=default&hide_border=true)
 
 ---
-
-Built with ❤️ for the modern web 
+*"Creating AI solutions that make technology more accessible"* ✨
