@@ -24,23 +24,32 @@
         <section class="project-detail-page">
             <div class="container">
                 <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
-                <h1 class="section-title">NLP Pipeline for Safety Analysis</h1>
+                <h1 class="section-title">Identifying Workplace Accidents in News Articles</h1>
                 <div class="detail-content">
                     <h4>Project Overview</h4>
-                    <p>This NLP pipeline automates workplace safety analysis by detecting accident-related content in multilingual news articles. The system uses transformer models to identify, categorize, and analyze workplace incidents from global news sources.</p>
-                    <h4>Key Features</h4>
+                    <p>During my bachelor's research internship at TNO (Netherlands Organisation for Applied Scientific Research), I developed an NLP system to automatically identify and classify workplace accident reports in news media. The project aimed to understand how workplace accidents are represented in media coverage and uncover reporting trends by analyzing large-scale news corpora.</p>
+
+                    <h4>Technical Approach</h4>
+                    <p>The solution implemented a three-phase pipeline with increasing specificity:</p>
                     <ul>
-                        <li>Multi-language accident detection (English, Spanish, French, German, Chinese)</li>
-                        <li>Real-time news article processing and analysis</li>
-                        <li>Categorization by accident type, industry, and severity</li>
-                        <li>Risk pattern identification and trend analysis</li>
-                        <li>Integration with safety reporting systems</li>
-                        <li>Automated safety alert generation</li>
+                        <li><strong>Phase 1 - General Accident Detection:</strong> Built a classifier to identify accident reports from non-accident news in a dataset of 300,000+ articles, requiring creation of a labeled dataset from scratch.</li>
+                        <li><strong>Phase 2 - Workplace Accident Filtering:</strong> Fine-tuned a second classifier to distinguish workplace-specific incidents from general accidents using contextual understanding.</li>
+                        <li><strong>Phase 3 - Categorization:</strong> Planned clustering and multi-class classification to categorize accidents by type (e.g., falls, chemical exposure, machine-related incidents).</li>
                     </ul>
-                    <h4>Technical Implementation</h4>
-                    <p>Built using Python with transformer models including BERT and RoBERTa, fine-tuned on multilingual safety datasets. Implements custom tokenization for technical safety terminology and uses ensemble methods for improved accuracy across languages.</p>
-                    <h4>Impact</h4>
-                    <p>Processed over 100,000 news articles and identified 2,500+ workplace incidents. Reduced manual safety research time by 80% and improved incident response time by 45% through automated early detection.</p>
+                    <p>Evaluated multiple approaches including Logistic Regression and semi-supervised Label Propagation. BERT fine-tuning delivered superior performance through contextual language understanding and strategic class imbalance management.</p>
+
+                    <h4>Results & Impact</h4>
+                    <p>Achieved 0.89 F1-score on workplace accident identification. The BERT-based pipeline significantly outperformed traditional methods, demonstrating the critical importance of semantic context over keyword-based approaches. Delivered a scalable methodology enabling TNO to process vast news datasets for safety research and trend analysis.</p>
+
+                    <h4>Key Learnings</h4>
+                    <ul>
+                        <li><strong>Data Quality:</strong> Manual labeling and clear annotation protocols were essential for model performance.</li>
+                        <li><strong>Context Matters:</strong> Transformer models excel where traditional approaches fail due to their semantic understanding.</li>
+                        <li><strong>Class Imbalance:</strong> Active management through strategic balancing techniques was crucial for minority class performance.</li>
+                    </ul>
+
+                    <h4>Future Work</h4>
+                    <p>Next steps include implementing Phase 3 categorization, domain-specific BERT fine-tuning for Dutch content, and expanding to broader news sources for comparative analysis with official injury statistics.</p>
                 </div>
             </div>
         </section>

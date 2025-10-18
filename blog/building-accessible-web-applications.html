@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Accessible Web Applications - Taiki Papandreou</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="blog-post-detail">
+            <div class="container">
+                <a href="../blog.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Blog</a>
+
+                <article class="blog-post-full">
+                    <header class="post-header">
+                        <div class="post-meta">
+                            <span class="post-date">November 28, 2024</span>
+                            <span class="post-category">Web Development</span>
+                        </div>
+                        <h1 class="post-title">Building Accessible Web Applications</h1>
+                    </header>
+
+                    <div class="post-content">
+                        <p>Web accessibility isn't just a nice-to-have feature - it's essential for creating inclusive digital experiences. When we build applications that work for everyone, we create better products for all users, not just those with disabilities.</p>
+
+                        <h2>Understanding Web Accessibility</h2>
+                        <p>Web accessibility (often abbreviated as a11y) means making websites and applications usable by people with various disabilities. This includes visual, motor, auditory, and cognitive impairments.</p>
+
+                        <h2>Practical Implementation Tips</h2>
+                        <p>ARIA labels provide essential context for screen readers. Keyboard navigation ensures users can navigate without a mouse. Semantic HTML provides structure that assistive technologies can understand.</p>
+
+                        <h2>Common Accessibility Patterns</h2>
+                        <p>Focus management, color contrast ratios, and alternative text for images are fundamental. But accessibility goes beyond compliance - it's about creating intuitive, inclusive user experiences.</p>
+
+                        <h2>Conclusion</h2>
+                        <p>Building accessible web applications isn't just about following guidelines - it's about empathy and understanding. When we design for everyone, we create better experiences for all users.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Taiki Papandreou. Built with ❤️ for the web.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

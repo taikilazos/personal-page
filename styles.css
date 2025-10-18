@@ -81,7 +81,25 @@ body {
 /* Hero section */
 .hero {
     padding: 4rem 0;
-    text-align: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    align-items: start;
+    text-align: left;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
 }
 
 .hero-title {
@@ -230,12 +248,22 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -296,6 +324,13 @@ body {
     justify-content: center;
     color: #A1887F;
     font-size: 0.9rem;
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
 .project-content {
