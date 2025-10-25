@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Dashboard for Optimizing Prompts in Large Language Models - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">A Dashboard for Optimizing Prompts in Large Language Models</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>This research develops an interactive dashboard for optimizing prompts in large language models, specifically designed to assist prompt developers in improving text classification performance. The dashboard provides comprehensive visualizations, prompt experimentation tools, and insights into LLM attention mechanisms to bridge the gap between complex model capabilities and user-friendly interfaces.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Dataset visualization with label distribution histograms and word clouds for understanding data characteristics</li>
+                        <li>Interactive prompt engineering with template-based variable substitution and synonym suggestions</li>
+                        <li>Real-time prompt testing with color-coded performance feedback on individual samples</li>
+                        <li>Attention score visualizations to understand LLM decision-making processes</li>
+                        <li>Prompt evaluation with confusion matrices and performance metrics across multiple samples</li>
+                        <li>Support for multiple datasets (AG-news, Amazon Polarity, GLUE) and TinyLlama model integration</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>Built using modern web technologies with a three-component architecture: data selection, prompt engineering, and prompt evaluation. Implemented TinyLlama-1.1B-Chat-v1.0 via Hugging Face pipelines for efficient local inference. Features template-based prompt generation with variable substitution, WordNet-based synonym suggestions, and interactive attention visualization. The system processes text classification tasks with exact label matching and frequency-based prediction resolution for multi-label responses.</p>
+                    <h4>Key Findings & Impact</h4>
+                    <p>Demonstrated that prompt phrasing significantly impacts classification accuracy, with certain prompt structures achieving up to 80% accuracy on test samples. Attention visualizations revealed how LLMs focus on specific tokens when making predictions, providing insights for prompt optimization. The dashboard successfully bridges the gap between expert prompt engineering knowledge and accessible tools for non-experts, enabling more effective LLM utilization across various text classification domains.</p>
+                    <h4>Publication</h4>
+                    <p>Co-authored with Angelo Broere, Luuk Versteeg, and Tobie Werner. This work addresses the growing need for user-friendly tools in the prompt engineering space, inspired by PromptIDE and extending it with comprehensive attention visualization and evaluation capabilities. Code available at: <a href="https://github.com/Luuk-Versteeg/MMA-group3" target="_blank">https://github.com/Luuk-Versteeg/MMA-group3</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Taiki Papandreou</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -24,30 +24,32 @@
         <section class="project-detail-page">
             <div class="container">
                 <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
-                <h1 class="section-title">Political Bias Detection System</h1>
+                <h1 class="section-title">Medical Text Simplification: From Jargon Detection to Jargon-Aware Prompting</h1>
                 <div class="detail-content">
                     <h4>Project Overview</h4>
-                    <p>This system provides real-time political bias detection in news content using advanced transformer models. It analyzes news articles to identify bias patterns and introduces novel metrics for quantifying political coverage balance.</p>
+                    <p>This research investigates automatic jargon detection and LLM-based medical text simplification to improve health literacy. We address the challenge of making biomedical texts accessible to lay readers by developing models that identify complex terminology and evaluating strategies for effective simplification.</p>
                     <h4>Key Features</h4>
                     <ul>
-                        <li>Real-time bias detection in news articles</li>
-                        <li>Multi-dimensional bias analysis (political spectrum, intensity, framing)</li>
-                        <li>Novel bias metrics including coverage balance and framing consistency</li>
-                        <li>Integration with GDELT global news database</li>
-                        <li>Trend analysis across time periods and topics</li>
-                        <li>Visual dashboards for bias pattern exploration</li>
+                        <li>Jargon detection across biomedical datasets (MedReadMe and PLABA)</li>
+                        <li>Cross-dataset transfer learning evaluation and annotation schema alignment</li>
+                        <li>Jargon-aware prompting strategies for LLM-based text simplification</li>
+                        <li>Comparative analysis of general-purpose vs. domain-specialized language models</li>
+                        <li>Human evaluation studies validating automatic metrics</li>
+                        <li>Comprehensive benchmarking with multiple transformer architectures</li>
                     </ul>
                     <h4>Technical Implementation</h4>
-                    <p>Developed using Python with RoBERTa transformer models fine-tuned on political news datasets. Implements custom attention mechanisms for bias pattern detection and integrates with the GDELT database for comprehensive news coverage analysis.</p>
-                    <h4>Impact</h4>
-                    <p>Analyzed over 500,000 news articles and identified systematic bias patterns across major media outlets. The novel metrics introduced have been cited in 3 academic papers and helped improve media literacy understanding by 28% in user studies.</p>
+                    <p>Implemented using Python with transformer models including BERT, RoBERTa, BioBERT, and PubMedBERT. Fine-tuned models on biomedical datasets using BIO tagging for span detection, with custom evaluation pipelines measuring token-level and entity-level F1 scores. Developed jargon-aware prompting strategies for Llama-3.1-8B-Instruct and Medicine-Llama3-8B models, evaluating simplification quality through automatic metrics (SARI, BERTScore, FKGL, BLEU) and human assessments.</p>
+                    <h4>Key Findings & Impact</h4>
+                    <p>Successfully reproduced MedReadMe's jargon detection results and extended evaluation to PLABA dataset, revealing that cross-dataset transfer learning yields modest gains primarily limited by divergent annotation objectives. Manual re-annotation of PLABA sentences using MedReadMe's taxonomy improved transfer performance from 33.71% to 42.00% entity F1, demonstrating that annotation schema alignment significantly boosts generalization. Jargon-aware prompting showed model-dependent effectiveness, with benefits often trading off against readability. The work contributes to improving medical text accessibility and has implications for health communication tools.</p>
+                    <h4>Publication</h4>
+                    <p>Co-authored with Jan Bakker and Jaap Kamps from the Institute for Logic, Language and Computation (ILLC), University of Amsterdam. Code and data publicly available at: <a href="https://github.com/taikilazos/thesis_codebase" target="_blank">https://github.com/taikilazos/thesis_codebase</a></p>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Taiki Papandreou. Built with ❤️ for the web.</p>
+            <p>&copy; 2024 Taiki Papandreou</p>
         </div>
     </footer>
 </body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Multimodal Segmentation Using Foundation Models - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">Medical Multimodal Segmentation Using Foundation Models</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>This research undertakes a comprehensive reproducibility analysis and extension of "SegVol: Universal and Interactive Volumetric Medical Image Segmentation," a 3D foundation model for interactive volumetric medical image segmentation. The project validates SegVol's claims, assesses its geometric robustness to rotations, and proposes novel improvements using group equivariant convolutions.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Reproduction of SegVol's core experiments on organ and lesion segmentation tasks</li>
+                        <li>Evaluation of different prompting strategies (spatial, semantic, and combined)</li>
+                        <li>Assessment of model robustness to global rotations in medical imaging</li>
+                        <li>Novel contribution using SO(3)-equivariant steerable convolutions</li>
+                        <li>Parameter-efficient adaptation techniques (LoRA and side-tuning)</li>
+                        <li>Comprehensive analysis of strengths, weaknesses, and improvement potential</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>Implemented using the original SegVol codebase with modifications for reproducibility experiments. The model architecture integrates Vision Transformer (ViT) for volumetric encoding, CLIP text encoder for semantic prompts, and custom spatial encoders. For the novel contribution, developed SO(3)-equivariant patch embeddings using steerable convolutions from the ESCNN library, combined with LoRA adaptation modules for parameter-efficient fine-tuning. Evaluated performance using Dice Similarity Coefficient and assessed geometric robustness through systematic rotation experiments.</p>
+                    <h4>Key Findings & Impact</h4>
+                    <p>Successfully reproduced SegVol's superior performance over task-specific baselines and validated the benefits of combined spatial-semantic prompting. Identified critical robustness issues with global rotations (up to 26% performance drop on certain organs), demonstrating the need for geometric-aware architectures in medical imaging. Proposed novel SO(3)-equivariant adaptation achieved comparable performance to rotation-augmented baselines while requiring 17% fewer training epochs, showing promising data efficiency improvements for geometric robustness.</p>
+                    <h4>Publication</h4>
+                    <p>Co-authored with Danny van den Berg, Roan van Blanken, and Jesse Brouwers under the supervision of Teaching Assistant Stefanos Achlatis at the University of Amsterdam. This work reproduces and extends the SegVol paper by Du et al. (2023), providing valuable insights for robust medical image segmentation in clinical applications.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Taiki Papandreou</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducibility Study Of Learning Fair Graph Representations Via Automated Data Augmentations - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">Reproducibility Study Of Learning Fair Graph Representations Via Automated Data Augmentations</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>This research undertakes a comprehensive reproducibility analysis of "Learning Fair Graph Representations Via Automated Data Augmentations" by Ling et al. (2022). We assess the validity of the original claims focused on node classification tasks and explore the performance of the Graphair framework in link prediction tasks across various real-world datasets.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Replication of original experiments to assess reproducibility of three main claims</li>
+                        <li>Extension of Graphair framework from node classification to link prediction tasks</li>
+                        <li>Cross-dataset evaluation with NBA, Pokec-n, Pokec-z, Citeseer, Cora, and PubMed datasets</li>
+                        <li>Implementation of dyadic-level fairness metrics for link prediction</li>
+                        <li>Comparative analysis with baseline models (FairAdj, FairDrop)</li>
+                        <li>Ablation studies on model components and hyperparameter sensitivity</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>Implemented using the DIG library's Graphair module with modifications for link prediction tasks. Employed adversarial training for fairness, contrastive learning for informativeness, and reconstruction regularization. Adapted the framework to handle dyadic fairness metrics by computing Hadamard products of node embeddings and implementing subgroup/mixed dyadic group classifications. Conducted extensive grid search hyperparameter tuning and utilized high-performance computing with NVIDIA A100 GPUs.</p>
+                    <h4>Key Findings & Impact</h4>
+                    <p>Successfully reproduced two of three original claims and partially reproduced the third, with discrepancies attributed to differences in experimental setup and training epochs. Extended Graphair to link prediction, demonstrating superior trade-off for subgroup dyadic-level fairness compared to baseline models. The study validates Graphair's adaptability across different downstream tasks and provides insights into the challenges of reproducing graph representation learning research.</p>
+                    <h4>Publication</h4>
+                    <p>Co-authored with Thijmen Nijdam, Juell Sprott, and Jurgen de Heus from the University of Amsterdam. Code and data publicly available at: <a href="https://github.com/juellsprott/graphair-reproducibility" target="_blank">https://github.com/juellsprott/graphair-reproducibility</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Taiki Papandreou</p>
+        </div>
+    </footer>
+</body>
+</html>
