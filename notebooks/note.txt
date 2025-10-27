@@ -1,0 +1,24 @@
+## Transformer
+
+<img src="transformer.png" width="50%" alt="Transformer architecture">
+
+Now finally we can look at Transformer architecture! In short, transformer consists of two big parts: encoder and decoder. The left side is the encoder, and it maps an input sequence of continuous representations, and then gives this to decoder. The decoder (right side) generates an output sequence, with the output of encoder and already decoddd output from the previous time step. Both encoders and decoders have N layers which are sequentially built so layer 1's output goes to layer 2 and layer N output is what is outputted from each part. 
+
+### Encoder
+First of all it's important to know that transformer has no architectural design to get positional understanding of an input since it doesn't use recurrence or convolution. But positional understanding is crucial so what they did was they used positional encoding before feeding it in encoder or decoder. the first sublayer it goes through is multi-head self attention which I explained above, which basicallty let model know which parts in a squence are more important. Then it goes through Fully connected Feed forward neural network (FFN). which is just two linear layers ending with Relu actiovation function.
+
+$$\text{FFN}(x) = \text{ReLU}(W_1 x + b_1)W_2 + b_2$$ 
+
+(note each layer has different parameters of course)
+
+Now we also see the residual connection (input being added to the output of each sublayer) to prevent deep networks to not forget or distort original squence as it foes through many layers. We also use Layer Normalization for numerical stability.
+
+### Decoder
+It's basically encoder but with addtional sublayer in the beginning. As an output it takes the output of decoder from the last time step (or what has generated so far by the model). important! the all first step it hasn't generated anything so that's why we add a special token like BOS (beginning of the sentence) to handle edge problem. The first sublayer is masked multi attention head and what it basically does is that it masks [why mask and what mask it?]
+
+and then it has multi-head attention where Q is from the encoder and K and V are from the masked multi head. [maybe explain a bit more in 2 sentences.]
+
+FC FF network adds none linearlity and thus make it able to learn from data.
+
+
+Why 2 layers? because it is simple and yet complex. More layers equals more parameters and heavier, prone to overfitting. 
