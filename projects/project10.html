@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Inside a Client's Azure Tenant - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">AI Assistant Inside a Client's Azure Tenant</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>An assistant that lives as a chat bot in Microsoft Teams for a spa resort group. It triages the user's inbox, drafts replies, schedules meetings across colleagues' calendars, manages tasks, sends a morning briefing, and can be phoned by voice.</p>
+                    <p>It runs entirely inside the customer's own Azure tenant, on their own model. We ship a Docker image and nothing else &mdash; no data leaves their boundary, which is the only reason the deal was possible.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Inbox triage and drafted replies</li>
+                        <li>Meeting scheduling across colleagues' calendars</li>
+                        <li>Task management and a morning briefing</li>
+                        <li>Voice calling</li>
+                        <li>Runs on the customer's own model, inside their own tenant</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>The design point: every outward action is a code-enforced propose-then-confirm. The model drafts the email; a human presses send. That is enforced in code, not in the prompt, because a prompt is a request and a code path is a guarantee.</p>
+                    <p>Python, Azure App Service, Azure OpenAI, Bot Framework, Microsoft Graph, MSAL OAuth, Docker, GitHub Actions.</p>
+                    <h4>Results</h4>
+                    <p>Live at the client 20 days after first commit &middot; installed in a single 90-minute session &middot; 382 automated tests &middot; ~10,800 lines of Python.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

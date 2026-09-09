@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Security Scanner - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">AI Code Security Scanner</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>A one-day prototype. A read-only scanner that reviews a codebase for security problems, built end to end in about a day.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Reviews a codebase for security problems and reports what it finds</li>
+                        <li>Read-only by construction: the agent's tools cannot write, so a scan can't modify what it's inspecting</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>FastAPI, Claude Agent SDK, Next.js.</p>
+                    <h4>Results</h4>
+                    <p>Tested against a purpose-built vulnerable app, it found all 6 planted vulnerabilities &mdash; plus 2 real ones nobody had planted &mdash; with zero false positives, in 70 to 100 seconds per scan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

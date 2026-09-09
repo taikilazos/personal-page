@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Back Office Platform - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">Internal Back Office Platform</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>Everything arriving through a company website &mdash; enquiries, training leads, job applications &mdash; handled all the way through to a signed quote, a sent invoice, a matched bank payment, and monthly search-visibility numbers.</p>
+                    <p>I built it end to end as the sole engineer: design, code, infrastructure, tests, deploy.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Invoicing with an in-house PDF generator</li>
+                        <li>Its own e-signing flow &mdash; drawn signature, timestamp, IP, expiry, evidence retention</li>
+                        <li>Bank reconciliation over an open-banking API</li>
+                        <li>Expense capture with AI categorisation feeding VAT-return tables</li>
+                        <li>A Word-like article editor that publishes straight to the public site's repo</li>
+                        <li>Cookieless analytics that store no IPs and set no cookies</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>It also runs a monthly measurement asking the same questions across ChatGPT, Claude and Gemini, scoring whether the company shows up at all. The first baseline: 0 of 51 answers mentioned it.</p>
+                    <p>Node.js, Postgres, vanilla JS, hand-built SVG charts, pdfkit, Playwright, Railway, Cloudflare.</p>
+                    <h4>Results</h4>
+                    <p>141 commits over 19 working days &middot; 22 database tables &middot; 11 Playwright suites &middot; replaced three paid subscriptions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk-Assessment Tool for a Dutch Insurer - Project Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Taiki Papandreou</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">Risk-Assessment Tool for a Dutch Insurer</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>A Dutch insurer's outsourcing risk assessment lived in a 20-tab Excel file. I rebuilt it as a web tool as the sole engineer on a six-week, four-person engagement.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>An AI reads the source documents and proposes an answer for each field, with the source and the exact quote it came from</li>
+                        <li>A human accepts or rejects each proposal</li>
+                        <li>Export as the 330-column CSV their production platform expects</li>
+                        <li>A 37-step self-driving demo tour</li>
+                        <li>An offline build: a single 1 MB HTML file that replays recorded responses, so the demo survives a meeting room with no wifi</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>The scoring rules are computed in code &mdash; not by the model &mdash; so the verdict is reproducible and explainable.</p>
+                    <p>FastAPI, SQLAlchemy, Postgres, Anthropic SDK, React 19 + TypeScript, Railway, Docker.</p>
+                    <h4>Results</h4>
+                    <p>42 field proposals in about two minutes, every check passing against the client's own answer key, nothing invented &middot; CSV export byte-identical across all 330 columns &middot; scoring golden-tested against real completed assessments &middot; 145 automated tests.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
