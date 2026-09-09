@@ -1,5 +1,10 @@
 // Single-page navigation and active state management
 document.addEventListener('DOMContentLoaded', function() {
+    // Dynamic copyright year
+    document.querySelectorAll('.copyright-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
+
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
