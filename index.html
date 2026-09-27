@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiki Papandreou - AI Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">Taiki Papandreou</a>
-            </div>
-                         <ul class="nav-menu">
-                <li><a href="#about" class="nav-link active">About</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
             </ul>
@@ -46,99 +43,24 @@
             </div>
         </section>
 
-        <section class="home-section home-section-alt reveal">
+        <section class="home-section reveal">
             <div class="container home-narrow">
-                <h2 class="home-heading">About</h2>
-                <p>
-                    I'm the engineer at a five-person AI consultancy in the Netherlands, which in practice means I
-                    build the thing, deploy it, write the documentation, sit in the client meeting, and then explain it
-                    to the board.
-                </p>
-                <p>
-                    In four months I've put an assistant live inside a client's own Azure tenant twenty days after the
-                    first commit, rebuilt an insurer's risk-assessment process as a tool where the AI proposes and a
-                    human decides, and built our entire back office - invoicing, e-signing, bank reconciliation, VAT
-                    returns - because buying five subscriptions was the worse option.
-                </p>
-                <p>
-                    Before that: an MSc in Artificial Intelligence at the University of Amsterdam, and three published
-                    papers on text simplification and fairness in graph neural networks.
-                </p>
-                <p>
-                    I build with agentic coding tools day to day, and I say so to clients rather than letting them find out later.
+                <p class="home-lede-line">
+                    AI engineer at a five-person consultancy in the Netherlands &mdash; in four months I've shipped an
+                    AI assistant inside a client's Azure tenant, rebuilt an insurer's risk-assessment process around
+                    human sign-off, and built our entire back office. MSc in Artificial Intelligence, University of
+                    Amsterdam, and three published papers.
                 </p>
             </div>
         </section>
 
-        <section class="home-section reveal">
-            <div class="container">
-                <h2 class="home-heading">Skills</h2>
-                <dl class="skill-rows">
-                    <div class="skill-row">
-                        <dt>AI / ML</dt>
-                        <dd>Large language models &middot; agent loops with tool use &middot; RAG &middot; provenance-tracked extraction &middot; prompt design &middot; LLM-as-judge evaluation &middot; PyTorch &middot; Transformers &middot; Azure AI Foundry &middot; OpenAI and Anthropic APIs</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Backend</dt>
-                        <dd>Python &middot; FastAPI &middot; SQLAlchemy &middot; Node.js &middot; Postgres &middot; SQL &middot; REST APIs &middot; golden-file and unit testing</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Frontend</dt>
-                        <dd>React 19 &middot; TypeScript &middot; vanilla JS &middot; hand-built SVG data visualisation</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Cloud / DevOps</dt>
-                        <dd>Microsoft Azure (App Service, Entra, Bot Service, OpenAI) &middot; Docker &middot; GitHub Actions &middot; Railway &middot; Cloudflare &middot; OAuth and secret handling</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Microsoft 365</dt>
-                        <dd>Graph API &middot; Teams bots &middot; Power Automate &middot; Office Scripts</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Compliance</dt>
-                        <dd>GDPR and EU AI Act assessment &middot; EU data residency &middot; retention rules &middot; DPA and sub-processor review</dd>
-                    </div>
-                    <div class="skill-row">
-                        <dt>Languages</dt>
-                        <dd>Dutch &middot; English &middot; Japanese</dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
-
-        <section class="home-section home-section-alt reveal">
-            <div class="container">
-                <h2 class="home-heading">Selected publications</h2>
-                <ul class="pub-list">
-                    <li>
-                        <a href="https://aclanthology.org/2025.tsar-1.3/" target="_blank">
-                            <span class="pub-title">Medical Text Simplification: From Jargon Detection to Automated Simplification</span>
-                            <span class="pub-venue">TSAR @ EMNLP 2025</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ceur-ws.org/Vol-4038/paper_359.pdf" target="_blank">
-                            <span class="pub-title">University of Amsterdam at the CLEF 2025 SimpleText Track</span>
-                            <span class="pub-venue">CEUR-WS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://arxiv.org/abs/2409.00421" target="_blank">
-                            <span class="pub-title">Reproducibility Study of Learning Fair Graph Representations via Automated Data Augmentations</span>
-                            <span class="pub-venue">TMLR &middot; NeurIPS 2024</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="home-section reveal">
+        <section class="home-section home-contact-section reveal">
             <div class="container home-narrow">
                 <h2 class="home-heading">Contact</h2>
                 <p class="home-contact">
-                    Reach me at taiki.papandreou at gmail dot com, or find me on
-                    <a href="https://www.linkedin.com/in/taiki-papandreou/" target="_blank">LinkedIn</a> and
-                    <a href="https://x.com/LazosTaiki" target="_blank">X</a>.
+                    taiki.papandreou at gmail dot com &middot;
+                    <a href="https://www.linkedin.com/in/taiki-papandreou/" target="_blank">LinkedIn</a> &middot;
+                    <a href="https://x.com/LazosTaiki" target="_blank">X</a>
                 </p>
             </div>
         </section>
