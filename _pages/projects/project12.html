@@ -1,0 +1,23 @@
+---
+title: AI Code Security Scanner - Project Detail
+nav: projects
+---
+        <section class="project-detail-page">
+            <div class="container">
+                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
+                <h1 class="section-title">AI Code Security Scanner</h1>
+                <div class="detail-content">
+                    <h4>Project Overview</h4>
+                    <p>A one-day prototype. A read-only scanner that reviews a codebase for security problems, built end to end in about a day.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Reviews a codebase for security problems and reports what it finds</li>
+                        <li>Read-only by construction: the agent's tools cannot write, so a scan can't modify what it's inspecting</li>
+                    </ul>
+                    <h4>Technical Implementation</h4>
+                    <p>FastAPI, Claude Agent SDK, Next.js.</p>
+                    <h4>Results</h4>
+                    <p>Tested against a purpose-built vulnerable app, it found all 6 planted vulnerabilities &mdash; plus 2 real ones nobody had planted &mdash; with zero false positives, in 70 to 100 seconds per scan.</p>
+                </div>
+            </div>
+        </section>

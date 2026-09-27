@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiki Papandreou - AI Engineer</title>
+    <meta name="description" content="Taiki Papandreou - AI engineer in the Netherlands building AI systems that ship into regulated businesses.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
     <script>document.documentElement.classList.add('js-reveal');</script>
+    
 </head>
 <body>
     <header class="header">
@@ -18,26 +21,20 @@
             </ul>
         </nav>
     </header>
-
     <main class="main">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
                         <p class="hero-eyebrow">AI Engineer &middot; Netherlands</p>
-                        <h1 class="hero-title">
-                            <span class="hero-line">The model proposes.</span>
-                            <span class="hero-line">The code decides.</span>
-                            <span class="hero-line hero-line-accent">A human signs off.</span>
-                        </h1>
-                        <p class="hero-lede">I build AI systems that ship into regulated businesses.</p>
+                        <h1 class="hero-lede">I build AI systems that ship into regulated businesses.</h1>
                         <div class="hero-buttons">
                             <a href="projects.html" class="btn btn-primary">View Projects</a>
                             <a href="assets/Taiki_CV.pdf" class="btn btn-secondary" download>Download CV</a>
                         </div>
                     </div>
                     <div class="hero-photo">
-                        <img src="assets/pfp.png" alt="Taiki Papandreou" class="profile-photo">
+                        <img src="assets/pfp.jpg" alt="Taiki Papandreou" class="profile-photo">
                     </div>
                 </div>
             </div>
@@ -68,19 +65,15 @@
 
     <footer class="footer">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div class="footer-row">
                 <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span id="visitor-count">Loading visitor count...</span>
-                </div>
+                <span id="visitor-count">Loading visitor count...</span>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
-    <!-- Visitor Counter Script -->
-    <script>
+    <script src="script.js" defer></script>
+<script>
         // Using CountAPI for a simple text-based visitor counter
         fetch('https://api.countapi.xyz/hit/taiki-personal-page/visits')
             .then(response => response.json())

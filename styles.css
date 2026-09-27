@@ -176,27 +176,6 @@ body::after {
     color: var(--accent-bright);
 }
 
-.hero-title {
-    font-size: clamp(2.5rem, 6.5vw, 4.75rem);
-    font-weight: 800;
-    line-height: 1.04;
-    letter-spacing: -0.04em;
-    color: var(--text);
-}
-
-.hero-title .hero-line {
-    display: block;
-}
-
-.hero-title .hero-line-accent {
-    background: var(--gradient-flow);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: gradient-sheen 9s ease infinite;
-}
-
 .hero-lede {
     font-size: clamp(1.05rem, 1.7vw, 1.35rem);
     color: var(--text-muted);
@@ -619,8 +598,7 @@ body::after {
     .hero-text > *,
     .hero-photo,
     body::before,
-    .nav-link.active::after,
-    .hero-title .hero-line-accent {
+    .nav-link.active::after {
         animation: none;
     }
 

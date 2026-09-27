@@ -52,8 +52,8 @@ def parse_source(text):
     for key, value in fm.items():
         if value == "|":
             fm[key] = ""
-        elif value.startswith("\n"):
-            fm[key] = textwrap.dedent(value).strip("\n")
+        elif value.startswith("|\n"):
+            fm[key] = textwrap.dedent(value[2:]).strip("\n")
     return fm, body
 
 
@@ -86,7 +86,7 @@ def render(source):
     foot = foot.replace("{{footer_extra}}", fm.get("footer_extra", ""))
     foot = foot.replace("{{extra_foot}}", fm.get("extra_foot", ""))
 
-    return head + "\n" + body + "\n" + foot
+    return head + body + foot
 
 
 def main():

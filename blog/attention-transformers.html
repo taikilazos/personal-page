@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Attention & Transformers - Taiki Papandreou</title>
+    <meta name="description" content="Taiki Papandreou - AI engineer in the Netherlands building AI systems that ship into regulated businesses.">
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link rel="stylesheet" href="../assets/fonts/fonts.css">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
+    <script>document.documentElement.classList.add('js-reveal');</script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -19,13 +21,13 @@
             border-radius: 8px;
             overflow-x: auto;
         }
-        
+
         pre code {
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.9rem;
             line-height: 1.5;
         }
-        
+
         .code-output {
             background: #10131C;
             border-left: 4px solid #8B7CFF;
@@ -108,13 +110,13 @@
             color: #9D8CFF;
             font-weight: 500;
         }
-        
+
         /* Math styling */
         mjx-container {
             overflow-x: auto;
             overflow-y: hidden;
         }
-        
+
         .blog-post-full {
             background: #151823;
             padding: 3rem;
@@ -122,12 +124,12 @@
             border: 1px solid rgba(255, 255, 255, 0.09);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
         }
-        
+
         @media (max-width: 768px) {
             .blog-post-full {
                 padding: 1.5rem;
             }
-            
+
             .post-title {
                 font-size: 2rem;
             }
@@ -312,11 +314,11 @@ print(attention_output)</code></pre>
 
                         <p>and \(W^O \in \mathbb{R}^{(h \times d_v) \times d_\text{model}}\) is the output projection matrix.</p>
 
-                        <img src="assets/multi-head-attention.png" alt="Multi-head attention diagram" style="width: 50%;">
+                        <img src="assets/multi-head-attention.jpg" alt="Multi-head attention diagram" style="width: 50%;">
 
                         <h2>Transformer Architecture</h2>
 
-                        <img src="assets/transformer.png" alt="Transformer architecture" style="width: 50%;">
+                        <img src="assets/transformer.jpg" alt="Transformer architecture" style="width: 50%;">
 
                         <p>Now we can finally look at the Transformer architecture! In short, Transformer consists of two main parts: encoder and decoder. The left side is the encoder, it maps an input sequence to continuous representations and then passes this to the decoder. The decoder (right side) generates an output sequence, using both the encoder's output and the previously decoded output from earlier time steps.</p>
 
@@ -476,13 +478,17 @@ voila! We made a 1M parameter language model!</div>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Taiki Papandreou</p>
+            <div class="footer-row">
+                <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+                
+            </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
+
 </body>
 </html>
-
