@@ -28,3 +28,18 @@ I build AI-powered solutions that solve real-world problems — from chatbots to
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=TaikiLazos&show_icons=true&theme=default&hide_border=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=TaikiLazos&layout=compact&theme=default&hide_border=true)
+---
+*"Creating AI solutions that make technology more accessible"* ✨
+## 🛠 Building the site
+
+The site is assembled by a zero-dependency build script — no framework, no node_modules:
+
+```
+python3 build.py
+```
+
+- Page content lives in `_pages/` (front matter + body HTML per page)
+- Shared markup lives in `_templates/` (`head.html`, `footer.html`)
+- The nav is defined once in `build.py` — change it there, rebuild, all pages update
+- Outputs are written to the repo root and committed, so GitHub Pages serves them as-is
+- Fonts are self-hosted (`assets/fonts/`, latin subset of Inter), images are resized JPEGs

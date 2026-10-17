@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <link rel="stylesheet" href="{{base}}styles.css">
+    <link rel="stylesheet" href="{{base}}assets/fonts/fonts.css">
+    <link rel="preload" as="font" type="font/woff2" href="{{base}}assets/fonts/inter-latin.woff2" crossorigin>
+    <script>document.documentElement.classList.add('js-reveal');</script>
+    {{extra_head}}
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-menu">
+{{nav}}
+            </ul>
+        </nav>
+    </header>
+    <main class="main">

@@ -1,0 +1,8 @@
+/* Self-hosted Inter — latin subset, variable weight 300-800 */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 800;
+    font-display: swap;
+    src: url('inter-latin.woff2') format('woff2');
+}
