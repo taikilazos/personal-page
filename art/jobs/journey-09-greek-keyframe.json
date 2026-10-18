@@ -1,0 +1,25 @@
+{
+  "scene": "journey",
+  "note": "Painted Greek-coast checkpoint in the Pegasus oil style, so the Silk Road journey stays a painting (the video model made a stock-photo coast with a golden ball).",
+  "prompt": "Image 1 is a heroic early 20th-century illustration oil painting. Image 2 is the scene just before this one, for continuity of composition. Make a new painting by the same hand as image 1, in exactly its style: rich oil paint with visible confident brushstrokes, warm golden light, painted clouds, never photographic, never a 3D render, never smooth or glossy. Scene: the Greek coast at golden hour. A rocky headland with a small white Greek temple rises on the right, olive trees on its slopes, the deep blue Mediterranean below catching the light. Low in the sky on the left the sun is a soft blazing glow of golden light with painted rays, not a solid ball, and a long ribbon of golden mist, the last trace of a dragon, streams toward it from the right across the sky. Distant blue islands on the horizon. Wide horizontal composition. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "greek-keyframe",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/pegasus-final-still.jpg",
+        "refs/silk-keyframe.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    }
+  ]
+}

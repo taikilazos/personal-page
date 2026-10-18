@@ -5,323 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Taiki Papandreou</title>
     <meta name="description" content="Taiki Papandreou - AI engineer in the Netherlands building AI systems that ship into regulated businesses.">
+    <meta name="theme-color" content="#1a2236">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
-    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
-    <script>document.documentElement.classList.add('js-reveal');</script>
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/shippori-mincho-500.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/zen-kaku-gothic-400.woff2" crossorigin>
     
 </head>
-<body>
+<body class="">
     <header class="header">
-        <nav class="nav">
+        <a class="masthead" href="index.html">Taiki Papandreou</a>
+        <nav class="nav" aria-label="Main">
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="projects.html" class="nav-link" aria-current="page">Projects</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="assets/Taiki_CV.pdf" class="nav-link">CV</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <section class="projects-hero">
+        <section class="page-head">
             <div class="container">
-                <h1 class="section-title">My Projects</h1>
-                <p class="projects-description">
-                    A collection of work showcasing my skills in AI and development.
-                </p>
+                <h1>Projects</h1>
+                <p>Systems I have built for clients, and the research and study projects that came before.</p>
             </div>
         </section>
 
-        <section class="projects-grid">
+        <section class="work">
             <div class="container">
-                <div class="projects-container">
-                    <!-- Case study 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Internal Back Office Platform</div>
+                <h2 class="work-group">Client work</h2>
+                <div class="work-list">
+                    <article class="work-item">
+                        <div class="work-text">
+                            <h3><a href="projects/project9.html">Internal Back Office Platform</a></h3>
+                            <p>Everything arriving through a company website handled through to a signed quote, a sent invoice and a matched bank payment. Built end to end as the sole engineer, with its own e-signing flow, open-banking reconciliation and cookieless analytics.</p>
+                            <p class="work-stack">Built with Node.js, Postgres, Playwright and Railway</p>
+                            <p class="work-links"><a href="projects/project9.html">Read the case study</a></p>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Internal Back Office Platform</h3>
-                            <p class="project-description">
-                                Everything arriving through a company website handled through to a signed quote, a sent invoice and a matched bank payment.
-                                Built end to end as the sole engineer, with its own e-signing flow, open-banking reconciliation and cookieless analytics.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Postgres</span>
-                                <span class="tech-tag">Playwright</span>
-                                <span class="tech-tag">Railway</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project9.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
+                    </article>
+                    <article class="work-item">
+                        <div class="work-text">
+                            <h3><a href="projects/project10.html">AI Assistant Inside a Client's Azure Tenant</a></h3>
+                            <p>A Microsoft Teams assistant that triages an inbox, drafts replies and schedules meetings, running entirely inside the customer's own Azure tenant. Every outward action is a code-enforced propose-then-confirm: the model drafts, a human presses send.</p>
+                            <p class="work-stack">Built with Python, Microsoft Azure, Microsoft Graph and Docker</p>
+                            <p class="work-links"><a href="projects/project10.html">Read the case study</a></p>
                         </div>
-                    </div>
+                    </article>
+                    <article class="work-item">
+                        <div class="work-text">
+                            <h3><a href="projects/project11.html">Risk-Assessment Tool for a Dutch Insurer</a></h3>
+                            <p>A 20-tab Excel risk assessment rebuilt as a web tool. An AI proposes an answer for each field with its source and exact quote, a human accepts or rejects, and the scoring is computed in code so the verdict stays reproducible.</p>
+                            <p class="work-stack">Built with FastAPI, Postgres, React 19 and TypeScript</p>
+                            <p class="work-links"><a href="projects/project11.html">Read the case study</a></p>
+                        </div>
+                    </article>
+                    <article class="work-item">
+                        <div class="work-text">
+                            <h3><a href="projects/project12.html">AI Code Security Scanner</a></h3>
+                            <p>A one-day prototype: a read-only scanner that reviews a codebase for security problems. Against a purpose-built vulnerable app it found all 6 planted vulnerabilities plus 2 real ones, with zero false positives.</p>
+                            <p class="work-stack">Built with FastAPI, Claude Agent SDK and Next.js</p>
+                            <p class="work-links"><a href="projects/project12.html">Read the case study</a></p>
+                        </div>
+                    </article>
+                </div>
 
-                    <!-- Case study 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">AI Assistant Inside a Client's Azure Tenant</div>
+                <h2 class="work-group">Earlier projects and research</h2>
+                <div class="work-list">
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project1.html" tabindex="-1" aria-hidden="true"><img src="assets/project1/front.jpg" alt="Educational Content Generation Platform" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project1.html">Educational Content Generation Platform</a></h3>
+                            <p>An end-to-end GenAI-powered platform that transforms documents into CEFR-leveled language learning materials with automated text simplification and exercise generation.</p>
+                            <p class="work-stack">Built with Python, Streamlit and OpenAI</p>
+                            <p class="work-links"><a href="projects/project1.html">Read the case study</a></p>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">AI Assistant Inside a Client's Azure Tenant</h3>
-                            <p class="project-description">
-                                A Microsoft Teams assistant that triages an inbox, drafts replies and schedules meetings, running entirely inside the customer's own Azure tenant.
-                                Every outward action is a code-enforced propose-then-confirm: the model drafts, a human presses send.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Microsoft Azure</span>
-                                <span class="tech-tag">Microsoft Graph</span>
-                                <span class="tech-tag">Docker</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project10.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project2.html" tabindex="-1" aria-hidden="true"><img src="assets/project2/front.jpg" alt="Legal AI Chatbot with RAG" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project2.html">Legal AI Chatbot with RAG</a></h3>
+                            <p>A RAG-based legal assistance chatbot that autonomously resolves inquiries through automated initial consultations and intelligent inquiry classification.</p>
+                            <p class="work-stack">Built with Python, Microsoft Azure, RAG and Streamlit</p>
+                            <p class="work-links"><a href="projects/project2.html">Read the case study</a> <a href="https://inloopadvocaat.streamlit.app/" target="_blank" rel="noopener">Try the demo</a></p>
                         </div>
-                    </div>
-
-                    <!-- Case study 3 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Risk-Assessment Tool for a Dutch Insurer</div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project3.html" tabindex="-1" aria-hidden="true"><img src="assets/project3/front.jpg" alt="NLP Pipeline for Safety Analysis" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project3.html">Identifying Workplace Accidents in News Articles</a></h3>
+                            <p>Developed a high-accuracy NLP pipeline using fine-tuned BERT models to automatically identify and classify workplace accidents in large-scale news corpora, achieving 0.89 F1-score for research at TNO.</p>
+                            <p class="work-stack">Built with Python, BERT, RoBERTa and NLP</p>
+                            <p class="work-links"><a href="projects/project3.html">Read the case study</a></p>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Risk-Assessment Tool for a Dutch Insurer</h3>
-                            <p class="project-description">
-                                A 20-tab Excel risk assessment rebuilt as a web tool. An AI proposes an answer for each field with its source and exact quote,
-                                a human accepts or rejects, and the scoring is computed in code so the verdict stays reproducible.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">Postgres</span>
-                                <span class="tech-tag">React 19</span>
-                                <span class="tech-tag">TypeScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project11.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project4.html" tabindex="-1" aria-hidden="true"><img src="assets/project4/front.jpg" alt="Jargon-Aware Medical Text Simplification" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project4.html">Jargon-Aware Medical Text Simplification</a></h3>
+                            <p>Research on automatic biomedical jargon detection and LLM-based text simplification. Evaluates cross-dataset transfer learning, establishes baselines on PLABA and MedReadMe datasets, and explores prompting strategies for medical text accessibility.</p>
+                            <p class="work-stack">Built with Python, BERT, RoBERTa and LLMs</p>
+                            <p class="work-links"><a href="projects/project4.html">Read the case study</a> <a href="https://github.com/taikilazos/thesis_codebase" target="_blank" rel="noopener">Code on GitHub</a></p>
                         </div>
-                    </div>
-
-                    <!-- Case study 4 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">AI Code Security Scanner</div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project5.html" tabindex="-1" aria-hidden="true"><img src="assets/project5/front.jpg" alt="Graphair: Fair Graph Augmentation for Representation Learning" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project5.html">Graphair: Fair Graph Augmentation for Representation Learning</a></h3>
+                            <p>Comprehensive reproduction and extension of Graphair, a fairness-aware graph augmentation method using adversarial learning, contrastive learning, and reconstruction regularization to reduce bias while preserving informativeness in GNNs.</p>
+                            <p class="work-stack">Built with Python, PyTorch and GNNs</p>
+                            <p class="work-links"><a href="projects/project5.html">Read the case study</a> <a href="https://github.com/taikilazos/Reproducibility-Study-Of-Graphair" target="_blank" rel="noopener">Code on GitHub</a></p>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">AI Code Security Scanner</h3>
-                            <p class="project-description">
-                                A one-day prototype: a read-only scanner that reviews a codebase for security problems. Against a purpose-built vulnerable app
-                                it found all 6 planted vulnerabilities plus 2 real ones, with zero false positives.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">Claude Agent SDK</span>
-                                <span class="tech-tag">Next.js</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project12.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project6.html" tabindex="-1" aria-hidden="true"><img src="assets/project6/front.jpg" alt="Medical Multimodal Segmentation Using Foundation Models" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project6.html">Medical Multimodal Segmentation Using Foundation Models</a></h3>
+                            <p>Comprehensive reproduction and extension of SegVol, a foundation model for 3D medical image segmentation. Evaluates geometric robustness to rotations and proposes novel group equivariant patch embeddings for enhanced rotation invariance.</p>
+                            <p class="work-stack">Built with Python, Vision Transformers and Medical Imaging</p>
+                            <p class="work-links"><a href="projects/project6.html">Read the case study</a> <a href="https://github.com/DB19222/DL2-group5-med-seg" target="_blank" rel="noopener">Code on GitHub</a></p>
                         </div>
-                    </div>
-
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project1/front.jpg" alt="Educational Content Generation Platform" class="project-screenshot">
+                    </article>
+                    <article class="work-item has-image">
+                        <div class="work-image"><img src="assets/project7/front.jpg" alt="What Do YuE's Attention Heads Hear?" loading="lazy"></div>
+                        <div class="work-text">
+                            <h3>What Do YuE's Attention Heads Hear?</h3>
+                            <p>Probing musical characteristics in YuE, a generative music model. Investigates genre-specific attention patterns across Jazz, Metal, Pop, and Classical, revealing deeper layers' stronger activations and semantic-genre links, while uncovering biases toward certain prompt words.</p>
+                            <p class="work-stack">Built with Python, Transformers and Music Generation</p>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Educational Content Generation Platform</h3>
-                            <p class="project-description">
-                                An end-to-end GenAI-powered platform that transforms documents into CEFR-leveled language learning materials 
-                                with automated text simplification and exercise generation.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">OpenAI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project1.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
+                    </article>
+                    <article class="work-item has-image">
+                        <a class="work-image" href="projects/project8.html" tabindex="-1" aria-hidden="true"><img src="assets/project8/front.jpg" alt="A Dashboard for Optimizing Prompts in Large Language Models" loading="lazy"></a>
+                        <div class="work-text">
+                            <h3><a href="projects/project8.html">A Dashboard for Optimizing Prompts in Large Language Models</a></h3>
+                            <p>Interactive dashboard for prompt engineering optimization in LLMs. Features dataset visualizations, prompt experimentation tools, attention score insights, and performance evaluation through confusion matrices to enhance text classification accuracy.</p>
+                            <p class="work-stack">Built with Python, Streamlit and TinyLlama</p>
+                            <p class="work-links"><a href="projects/project8.html">Read the case study</a> <a href="https://github.com/Luuk-Versteeg/MMA-group3" target="_blank" rel="noopener">Code on GitHub</a></p>
                         </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project2/front.jpg" alt="Legal AI Chatbot with RAG" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Legal AI Chatbot with RAG</h3>
-                            <p class="project-description">
-                                A RAG-based legal assistance chatbot that autonomously resolves inquiries through
-                                automated initial consultations and intelligent inquiry classification.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Microsoft Azure</span>
-                                <span class="tech-tag">RAG</span>
-                                <span class="tech-tag">Streamlit</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project2.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="https://inloopadvocaat.streamlit.app/" class="btn btn-small btn-secondary">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project3/front.jpg" alt="NLP Pipeline for Safety Analysis" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Identifying Workplace Accidents in News Articles</h3>
-                            <p class="project-description">
-                                Developed a high-accuracy NLP pipeline using fine-tuned BERT models to automatically identify and classify workplace accidents
-                                in large-scale news corpora, achieving 0.89 F1-score for research at TNO.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">BERT</span>
-                                <span class="tech-tag">RoBERTa</span>
-                                <span class="tech-tag">NLP</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project3.html" class="btn btn-small btn-primary">Detail</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project4/front.jpg" alt="Jargon-Aware Medical Text Simplification" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Jargon-Aware Medical Text Simplification</h3>
-                            <p class="project-description">
-                                Research on automatic biomedical jargon detection and LLM-based text simplification. Evaluates cross-dataset transfer learning,
-                                establishes baselines on PLABA and MedReadMe datasets, and explores prompting strategies for medical text accessibility.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">BERT</span>
-                                <span class="tech-tag">RoBERTa</span>
-                                <span class="tech-tag">LLMs</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project4.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="https://github.com/taikilazos/thesis_codebase" class="btn btn-small btn-secondary">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project5/front.jpg" alt="Graphair: Fair Graph Augmentation for Representation Learning" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Graphair: Fair Graph Augmentation for Representation Learning</h3>
-                            <p class="project-description">
-                                Comprehensive reproduction and extension of Graphair, a fairness-aware graph augmentation method using adversarial learning,
-                                contrastive learning, and reconstruction regularization to reduce bias while preserving informativeness in GNNs.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">GNNs</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project5.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="https://github.com/taikilazos/Reproducibility-Study-Of-Graphair" class="btn btn-small btn-secondary">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project6/front.jpg" alt="Medical Multimodal Segmentation Using Foundation Models" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Medical Multimodal Segmentation Using Foundation Models</h3>
-                            <p class="project-description">
-                                Comprehensive reproduction and extension of SegVol, a foundation model for 3D medical image segmentation.
-                                Evaluates geometric robustness to rotations and proposes novel group equivariant patch embeddings for enhanced rotation invariance.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Vision Transformers</span>
-                                <span class="tech-tag">Medical Imaging</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project6.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="https://github.com/DB19222/DL2-group5-med-seg" class="btn btn-small btn-secondary">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 7 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project7/front.jpg" alt="What Do YuE's Attention Heads Hear?" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">What Do YuE's Attention Heads Hear?</h3>
-                            <p class="project-description">
-                                Probing musical characteristics in YuE, a generative music model. Investigates genre-specific attention patterns across Jazz, Metal, Pop, and Classical,
-                                revealing deeper layers' stronger activations and semantic-genre links, while uncovering biases toward certain prompt words.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Transformers</span>
-                                <span class="tech-tag">Music Generation</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project7.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="#" class="btn btn-small btn-secondary">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 8 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/project8/front.jpg" alt="A Dashboard for Optimizing Prompts in Large Language Models" class="project-screenshot">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">A Dashboard for Optimizing Prompts in Large Language Models</h3>
-                            <p class="project-description">
-                                Interactive dashboard for prompt engineering optimization in LLMs. Features dataset visualizations, prompt experimentation tools,
-                                attention score insights, and performance evaluation through confusion matrices to enhance text classification accuracy.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">TinyLlama</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="projects/project8.html" class="btn btn-small btn-primary">Detail</a>
-                                <a href="https://github.com/Luuk-Versteeg/MMA-group3" class="btn btn-small btn-secondary">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-row">
-                <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
-                
-            </div>
-        </div>
+        <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        
     </footer>
 
     <script src="script.js" defer></script>

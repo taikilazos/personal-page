@@ -1,0 +1,35 @@
+{
+  "scene": "journey",
+  "note": "Dragon to Pegasus as a westward Silk Road journey (Japan -> China -> Greece is the Silk Road travelled backwards). Golden pearl becomes the sun. 2 seeds.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "d2p-silkroad-1",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous camera journey travelling west, slow and painterly in every frame. A small glowing golden pearl appears ahead of the ink dragon and flies west, and the dragon follows it, the camera flying alongside. The dragon stays a loose ink brush painting, never 3D, never cartoon. Below them the Chinese ink mountains slowly flatten into the golden sand dunes of the Silk Road at sunset, a small caravan of camels crossing far below. The dragon's body thins into a long ribbon of golden cloud. The dunes give way to a deep blue Mediterranean sea and a Greek mountain with a small white temple on its slope. The golden pearl grows into the sun. In front of the sun, out of the clouds, a powerful white winged horse, Pegasus, rears up in a deep cobalt sky above sunlit white clouds, wings spread wide. Along the way the pale ink wash slowly warms and thickens into rich heroic oil paint. No text, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 1.1
+    },
+    {
+      "label": "d2p-silkroad-2",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous camera journey travelling west, slow and painterly in every frame. A small glowing golden pearl appears ahead of the ink dragon and flies west, and the dragon follows it, the camera flying alongside. The dragon stays a loose ink brush painting, never 3D, never cartoon. Below them the Chinese ink mountains slowly flatten into the golden sand dunes of the Silk Road at sunset, a small caravan of camels crossing far below. The dragon's body thins into a long ribbon of golden cloud. The dunes give way to a deep blue Mediterranean sea and a Greek mountain with a small white temple on its slope. The golden pearl grows into the sun. In front of the sun, out of the clouds, a powerful white winged horse, Pegasus, rears up in a deep cobalt sky above sunlit white clouds, wings spread wide. Along the way the pale ink wash slowly warms and thickens into rich heroic oil paint. No text, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 1.1
+    }
+  ]
+}

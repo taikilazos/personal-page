@@ -1,0 +1,47 @@
+{
+  "scene": "dragon",
+  "note": "Round 2: opposite of the fox scene. Loose splashed ink, mostly monochrome, one warm accent, subject left and text space right. Dragon painted like Chen Rong (public domain refs from Wikimedia Commons).",
+  "prompt": "The attached images are details of Chen Rong's Nine Dragons handscroll (1244). Use them as the guide for how the dragon is painted: loose wet ink, the head, a claw and a few coils emerging from cloud and spray while the rest of the body dissolves into ink wash and mist; scales only suggested by a few dry-brush strokes. Do not copy their exact composition. Make a Chinese ink painting on pale aged rice paper in the bold, spontaneous splashed-ink style (pomo and xieyi): fast, wild, confident brushstrokes, ink splashes and wet washes bleeding into the paper, large areas of bright empty paper. Mostly black and grey ink, only a little pale blue-green on a few rocks, and exactly one small warm accent of colour. The dragon is painted with the same loose brushwork as the landscape, never detailed, never a modern fantasy illustration. Wide horizontal composition. The subject sits in the left half; the right third is calm, bright, empty misty paper, kept free for text. No seal stamps, no written characters, no calligraphy, no text, no signature, no border. Not a digital painting, no 3D, no photorealism.",
+  "runs": [
+    {
+      "label": "b-storm",
+      "prompt": "Scene: a storm over jagged peaks. Dark splashed-ink clouds and slanting rain whirl around; a dragon claws its way upward through the storm on the left, only its head, one claw and a few coils visible in the churning cloud, reaching toward a small pale red sun breaking through at the top. The red sun is the one warm accent.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/chenrong/part-3.jpg",
+        "refs/chenrong/part-6.jpg",
+        "refs/chenrong/part-9.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 3,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.18
+    },
+    {
+      "label": "c-dragon-gate",
+      "prompt": "Scene: the Dragon Gate legend. A tall waterfall pours down a cliff on the left, painted in a few bold strokes of wet ink and white paper. At its foot, in the spray, a small orange carp leaps high up the falls; it is the one warm accent. Above the top of the falls, a dragon is forming out of the mist and spray, half cloud, only its head and a claw clear.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/chenrong/part-3.jpg",
+        "refs/chenrong/part-6.jpg",
+        "refs/chenrong/part-9.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 3,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.18
+    }
+  ]
+}

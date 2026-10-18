@@ -1,0 +1,14 @@
+{
+  "scene": "kitsune",
+  "note": "Round 2: gate faces the viewer, a pair of foxes looks at the viewer, real-print look guided by four Hasui prints (art/refs/hasui, not in git).",
+  "prompt": "The attached images are real woodblock prints by Kawase Hasui. Use them only as a guide for the art style: the printed colour, bokashi gradients, keylines, rain, paper and woodgrain. Do not copy their scenes; make this new scene. An authentic Japanese shin-hanga woodblock print by Kawase Hasui, about 1930, as a scanned museum print. Rainy evening at an Inari fox shrine. A vermilion two-storey shrine gate, seen straight on from the front, stands right of centre, its doors facing the viewer, with bronze lanterns under the eaves, one softly lit. Two white kitsune fox guardians with red cloth bibs sit on stone pedestals on either side of the gate steps, facing forward and looking straight at the viewer. A wet stone path leads to the gate, reflecting the red pillars. Tall dark cedars behind, a pine branch over the top. Long fine white rain lines. Limited palette of about six printed colours: grey-teal sky, vermilion, dark pine green, stone grey, ivory, warm lamp yellow. Flat colour with soft bokashi gradients, crisp carved keylines, woodgrain in the sky, washi paper fibres, slight colour misregistration, matte ink. Calm composition with large quiet areas. The left third is open misty sky for text. Not a digital painting, no 3D, no photorealism, no glow effects. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "sunburst-refs",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": ["refs/hasui/shrine-rain-red.jpg", "refs/hasui/town-night-rain.jpg", "refs/hasui/gate-pine-rain.jpg", "refs/hasui/temple-snow.jpg"],
+      "input": { "image_size": { "width": 1920, "height": 1088 }, "quality": "high", "num_images": 4, "output_format": "png" },
+      "est_cost_usd": 0.3
+    }
+  ]
+}

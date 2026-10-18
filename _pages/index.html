@@ -1,62 +1,95 @@
 ---
 title: Taiki Papandreou - AI Engineer
-nav: home
-footer_extra: |
-    <span id="visitor-count">Loading visitor count...</span>
+body_class: home
 extra_foot: |
-    <script>
-            // Using CountAPI for a simple text-based visitor counter
-            fetch('https://api.countapi.xyz/hit/taiki-personal-page/visits')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('visitor-count').textContent = `Visitors: ${data.value}`;
-                })
-                .catch(error => {
-                    console.log('Counter service unavailable, showing local count');
-                    // Fallback to localStorage counter
-                    let count = localStorage.getItem('visitorCount') || 0;
-                    count = parseInt(count) + 1;
-                    localStorage.setItem('visitorCount', count);
-                    document.getElementById('visitor-count').textContent = `Visitors: ${count}`;
-                });
-        </script>
+    <script src="myth.js" defer></script>
 ---
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="hero-eyebrow">AI Engineer &middot; Netherlands</p>
-                        <h1 class="hero-lede">I build AI systems that ship into regulated businesses.</h1>
-                        <div class="hero-buttons">
-                            <a href="projects.html" class="btn btn-primary">View Projects</a>
-                            <a href="assets/Taiki_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+        <section class="myth">
+            <div class="myth-stage" data-tone="dark" aria-hidden="true">
+                <video class="myth-film" data-src="assets/myth-film/journeys.mp4" data-src-small="assets/myth-film/journeys-small.mp4" poster="assets/myth-film/kitsune.jpg" muted playsinline preload="auto"></video>
+                <video class="myth-loop is-on" data-src="assets/myth-film/kitsune.mp4" data-src-small="assets/myth-film/kitsune-small.mp4" poster="assets/myth-film/kitsune.jpg" muted loop playsinline preload="auto"></video>
+                <video class="myth-loop" data-src="assets/myth-film/dragon.mp4" data-src-small="assets/myth-film/dragon-small.mp4" poster="assets/myth-film/dragon.jpg" muted loop playsinline preload="none"></video>
+                <video class="myth-loop" data-src="assets/myth-film/pegasus.mp4" data-src-small="assets/myth-film/pegasus-small.mp4" poster="assets/myth-film/pegasus.jpg" muted loop playsinline preload="none"></video>
+                <div class="myth-scrim"></div>
+            </div>
+
+            <div class="myth-chapters">
+                <section class="chapter chapter-intro">
+                    <div class="container">
+                        <div class="chapter-text">
+                            <h1 class="myth-name">Taiki Papandreou</h1>
+                            <p class="lede">AI engineer in the Netherlands. I build AI systems that ship into regulated businesses.</p>
+                            <p>Three creatures from the cultures I carry: a guardian, a struggle, and freedom. One journey west, from Japan through China to Greece, along the old Silk Road.</p>
+                            <p class="scroll-cue">Scroll</p>
                         </div>
                     </div>
-                    <div class="hero-photo">
-                        <img src="assets/pfp.jpg" alt="Taiki Papandreou" class="profile-photo">
+                </section>
+
+                <section class="chapter">
+                    <div class="container">
+                        <div class="chapter-text">
+                            <span class="seal" lang="ja" aria-hidden="true">狐</span>
+                            <h2 class="chapter-title">Kitsune</h2>
+                            <p class="chapter-role">The guardian</p>
+                            <p>The shrine fox keeps watch at the gate. Sacred and a little mischievous, both at once. It protects without needing to be seen.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section class="home-section reveal">
-            <div class="container home-narrow">
-                <p class="home-lede-line">
-                    AI engineer at a five-person consultancy in the Netherlands &mdash; in four months I've shipped an
-                    AI assistant inside a client's Azure tenant, rebuilt an insurer's risk-assessment process around
-                    human sign-off, and built our entire back office. MSc in Artificial Intelligence, University of
-                    Amsterdam, and three published papers.
-                </p>
-            </div>
-        </section>
+                <section class="chapter chapter-journey" aria-hidden="true"></section>
 
-        <section class="home-section home-contact-section reveal">
-            <div class="container home-narrow">
-                <h2 class="home-heading">Contact</h2>
-                <p class="home-contact">
-                    taiki.papandreou at gmail dot com &middot;
-                    <a href="https://www.linkedin.com/in/taiki-papandreou/" target="_blank">LinkedIn</a> &middot;
-                    <a href="https://x.com/LazosTaiki" target="_blank">X</a>
-                </p>
+                <section class="chapter chapter-light">
+                    <div class="container">
+                        <div class="chapter-text">
+                            <span class="seal" lang="zh" aria-hidden="true">龍</span>
+                            <h2 class="chapter-title">L&oacute;ng</h2>
+                            <p class="chapter-role">The struggle</p>
+                            <p>The dragon does not fight another creature. It rises through the storm. Strength is holding on while the sea pushes back.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="chapter chapter-journey" aria-hidden="true"></section>
+
+                <section class="chapter">
+                    <div class="container">
+                        <div class="chapter-text">
+                            <span class="native" lang="el">Πήγασος</span>
+                            <h2 class="chapter-title">Pegasus</h2>
+                            <p class="chapter-role">Freedom</p>
+                            <p>Born from tragedy, it became beauty. It bows to no throne and does not need one. It keeps rising.</p>
+                            <p>Winged horses travelled east along the Silk Road. In China, the fine horses that came from the west were called heavenly horses.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="chapter chapter-final">
+                    <div class="container">
+                        <div class="chapter-text colophon">
+                            <div class="colophon-head">
+                                <h2>Taiki Papandreou</h2>
+                                <img src="assets/pfp.jpg" alt="Portrait of Taiki Papandreou" class="colophon-photo" width="72" height="72">
+                            </div>
+                            <dl>
+                                <dt>Work</dt>
+                                <dd>AI engineer at a five-person consultancy in the Netherlands.</dd>
+                                <dt>Shipped</dt>
+                                <dd>In four months: an AI assistant inside a client's Azure tenant, an insurer's risk assessment rebuilt around human sign-off, and our entire back office.</dd>
+                                <dt>Studied</dt>
+                                <dd>MSc in Artificial Intelligence, University of Amsterdam. Three published papers.</dd>
+                                <dt>Speaks</dt>
+                                <dd>English, Japanese and Dutch.</dd>
+                                <dt>Write to</dt>
+                                <dd>taiki.papandreou at gmail dot com</dd>
+                                <dt>Elsewhere</dt>
+                                <dd><a href="https://www.linkedin.com/in/taiki-papandreou/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://x.com/LazosTaiki" target="_blank" rel="noopener">X</a></dd>
+                            </dl>
+                            <p class="colophon-links">
+                                <a href="projects.html">See the projects</a>
+                                <a href="assets/Taiki_CV.pdf" download>Download the CV (PDF)</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>

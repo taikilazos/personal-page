@@ -1,0 +1,33 @@
+{
+  "scene": "journey",
+  "note": "One scroll-driven film: new 10 s camera-move transitions between the three chosen stills (loops already start/end on those stills).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "journey-k2d",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "est_cost_usd": 1.1,
+      "prompt": "One continuous camera journey, slow and smooth. The camera glides forward and up the wet stone steps, through the tunnel of vermilion torii gates, the gates passing by on both sides, toward the warm light glowing at the far end of the tunnel. At the end the camera emerges out of the tunnel into bright soft mist. As the mist clears, the world has become a Chinese ink and blue-green landscape painting on pale rice paper: mountains rising from clouds, a long ink dragon coiling between them, a pagoda, red plum blossom, a small boat on a still lake. The Japanese woodblock print style gradually turns into the Chinese ink painting style. Painterly in every frame, no 3D, no photorealism, no people.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/dragon-final-still.jpg"
+      }
+    },
+    {
+      "label": "journey-d2p",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "est_cost_usd": 1.1,
+      "prompt": "One continuous camera journey, slow and smooth. The camera rises upward, following the ink dragon as it climbs through the clouds; the mountains and the lake sink away below. The pale paper sky slowly deepens into a rich cobalt blue sky, the ink mist thickens into large sculpted white clouds in strong sunlight, and the ink brushwork turns into thick oil paint. The dragon disappears into the clouds, and as the camera rises above them a powerful white winged horse, Pegasus, rears up in the open sky with its great wings spread. Painterly in every frame, no 3D, no cartoon, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg"
+      }
+    }
+  ]
+}

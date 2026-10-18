@@ -1,0 +1,26 @@
+{
+  "scene": "kitsune",
+  "note": "Far misty forest layer on the left.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "far-forest",
+      "prompt": "misty forest",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 0,
+            "y_min": 330,
+            "x_max": 760,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.005
+    }
+  ]
+}

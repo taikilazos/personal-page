@@ -1,0 +1,107 @@
+{
+  "scene": "dragon",
+  "note": "Layers: cut the near plum branch, cliff and trees, plus the mountain cluster and dragon, for parallax.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "plum",
+      "prompt": "red plum blossom branch",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1270,
+            "y_min": 560,
+            "x_max": 1920,
+            "y_max": 1060
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "cliff",
+      "prompt": "rocky cliff with pine trees",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1440,
+            "y_min": 780,
+            "x_max": 1920,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "trees-bottom",
+      "prompt": "pine trees",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1100,
+            "y_min": 960,
+            "x_max": 1500,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "mountains",
+      "prompt": "mountains",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 680,
+            "y_min": 20,
+            "x_max": 1920,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "dragon",
+      "prompt": "dragon",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 830,
+            "y_min": 40,
+            "x_max": 1580,
+            "y_max": 680
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    }
+  ]
+}

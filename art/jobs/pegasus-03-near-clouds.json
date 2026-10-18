@@ -1,0 +1,26 @@
+{
+  "scene": "pegasus",
+  "note": "Layers: a separate near cloud bank on transparent, for depth in front of the Pegasus loop and as the rising wall in the dragon-to-Pegasus hand-off.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "near-clouds",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/pegasus-final-still-png.jpg"
+      ],
+      "prompt": "The attached painting shows the exact style: a heroic early 20th-century illustration oil painting with deep blue sky, hard sunlight and sculpted white clouds with crisp confident brushwork. Paint only a bank of big billowing white cumulus clouds in exactly that style and lighting (sunlight from the upper left, blue-grey shadows), filling the bottom 45 percent of a wide frame from the left edge to the right edge, with a rich, irregular billowing top edge. Everything above the clouds is fully transparent: no sky, no horse, no wings, nothing else. No text, no border.",
+      "input": {
+        "background": "transparent",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    }
+  ]
+}

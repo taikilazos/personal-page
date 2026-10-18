@@ -1,0 +1,31 @@
+{
+  "scene": "kitsune",
+  "note": "Round 4: three directions for a more mysterious, less centred scene. Shared style prompt, one scene per run.",
+  "prompt": "The attached images are guides for the art style only. The first one shows the colours, print texture, rain and wet stone reflections we want; do not copy its centred, symmetrical layout. The others are real shin-hanga prints, for colour and atmosphere. Do not copy any of their scenes. Make an authentic Japanese shin-hanga woodblock print in the manner of Kawase Hasui and Tsuchiya Koitsu, about 1930, as a scanned museum print. An Inari fox shrine deep in a cedar forest on a rainy night. Mysterious and quiet: much of the scene is lost in darkness and mist, and only a few things are lit. The composition is asymmetrical and off-centre, with architecture cropped by the edges of the frame, like Hasui does. Heavy rain as long fine white lines. Deep blue-grey night sky, darker toward the top. About six printed colours (deep blue-grey, vermilion, dark pine green, stone grey, ivory, warm lamp yellow), flat colour with soft bokashi gradients, crisp carved keylines, woodgrain in the sky, washi paper fibres, slight colour misregistration, matte ink. The left third of the image is open misty darkness, calm, kept empty for text. Not a digital painting, no 3D, no photorealism, no glow effects. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "a-tunnel",
+      "prompt": "Scene: looking up a mountain path into a long tunnel of vermilion Inari torii, seen at an angle from the side rather than straight on. The nearest torii is cut off by the top and right edges of the frame. Deep inside the tunnel a single stone lantern glows; the far end of the tunnel dissolves into mist and darkness. One white stone kitsune fox guardian with a red cloth bib sits on a pedestal close to the viewer at the right edge, half in shadow, looking toward the viewer, a faint gleam of lamplight in its eyes. Wet stone steps reflect the red torii.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": ["refs/kitsune-favourite-refs1.jpg", "refs/koitsu-rain-temple.jpg", "refs/hasui/shrine-rain-red.jpg", "refs/hasui/gate-pine-rain.jpg"],
+      "input": { "image_size": { "width": 1920, "height": 1088 }, "quality": "high", "num_images": 2, "output_format": "png" },
+      "est_cost_usd": 0.14
+    },
+    {
+      "label": "b-fox-mist",
+      "prompt": "Scene: a low viewpoint close to a single white stone kitsune fox guardian with a red cloth bib, on a mossy pedestal at the right side of the picture and partly cut off by the frame, looking straight at the viewer. Far behind it and off-centre, a vermilion torii stands half swallowed by mist and rain, with one lit stone lantern beside it. Wet flagstones between them. Large areas of empty misty darkness. Very still.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": ["refs/kitsune-favourite-refs1.jpg", "refs/koitsu-rain-temple.jpg", "refs/hasui/shrine-rain-red.jpg", "refs/hasui/gate-pine-rain.jpg"],
+      "input": { "image_size": { "width": 1920, "height": 1088 }, "quality": "high", "num_images": 2, "output_format": "png" },
+      "est_cost_usd": 0.14
+    },
+    {
+      "label": "c-visitor",
+      "prompt": "Scene: a tiny lone figure in a dark kimono holding a blue paper umbrella walks along a wet stone path toward a large vermilion Inari torii, which is seen from the side at an angle and stands right of centre. Enormous dark cedar trunks rise around them and make everything feel small. Far at the back, the warm lanterns of a shrine hall glow through the rain. Two white stone kitsune fox guardians sit small and almost hidden in the shadows beside the path, noticed only on a second look. The figure's reflection lies in the wet path.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": ["refs/kitsune-favourite-refs1.jpg", "refs/koitsu-rain-temple.jpg", "refs/hasui/shrine-rain-red.jpg", "refs/hasui/gate-pine-rain.jpg"],
+      "input": { "image_size": { "width": 1920, "height": 1088 }, "quality": "high", "num_images": 2, "output_format": "png" },
+      "est_cost_usd": 0.14
+    }
+  ]
+}

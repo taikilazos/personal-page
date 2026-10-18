@@ -1,0 +1,45 @@
+{
+  "scene": "kitsune",
+  "note": "Layers: clean plates behind the cut-out pieces (masked inpainting on the chosen still).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "plate-mid",
+      "prompt": "Repaint only the masked (transparent) areas. Remove the large foreground red torii gate (both near pillars, their black bases and stone footing, and the top beam), the near stone lantern on the left, the white stone fox statue with its tall stone wall on the right, the large dark cedar trunk, the near bushes at the bottom left and the leaves at the top right, and paint what lies behind them: the tunnel of smaller vermilion torii continuing up the wet stone steps, mossy stone walls beside the steps, dark cedar forest and misty night forest. Keep the exact same Japanese shin-hanga woodblock print style, colours, lighting, rain and paper texture as the rest of the image, so the repainted areas are invisible. Keep everything outside the masked areas exactly unchanged. No text, no border.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg"
+      ],
+      "input": {
+        "mask_url": "file:refs/kitsune-mask-mid.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    },
+    {
+      "label": "plate-sky",
+      "prompt": "Repaint only the masked (transparent) areas as open night sky: the same deep blue-grey sky with soft clouds and drifting mist continuing smoothly down to the bottom of the image, with no trees, no forest, no torii, no buildings, nothing but sky, clouds and mist. Keep the moon exactly where it is. Keep the exact same Japanese shin-hanga woodblock print style, colours, lighting, rain and paper texture as the rest of the image, so the repainted areas are invisible. Keep everything outside the masked areas exactly unchanged. No text, no border.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg"
+      ],
+      "input": {
+        "mask_url": "file:refs/kitsune-mask-sky.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    }
+  ]
+}

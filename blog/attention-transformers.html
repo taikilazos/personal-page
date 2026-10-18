@@ -5,158 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Attention & Transformers - Taiki Papandreou</title>
     <meta name="description" content="Taiki Papandreou - AI engineer in the Netherlands building AI systems that ship into regulated businesses.">
+    <meta name="theme-color" content="#1a2236">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
-    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
-    <script>document.documentElement.classList.add('js-reveal');</script>
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/shippori-mincho-500.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/zen-kaku-gothic-400.woff2" crossorigin>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
     <script>hljs.highlightAll();</script>
     <style>
-        /* Code block styling */
+        /* article-only additions; colours and type come from styles.css */
         pre {
-            margin: 1.5rem 0;
-            border-radius: 8px;
+            margin: 1.75rem 0;
+            border-radius: 4px;
             overflow-x: auto;
         }
-
         pre code {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
+            font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.88rem;
+            line-height: 1.55;
         }
-
         .code-output {
-            background: #10131C;
-            border-left: 4px solid #8B7CFF;
+            background: var(--ai-deep);
+            border-left: 3px solid var(--shu);
             padding: 1rem 1.5rem;
             margin: 1rem 0;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
+            font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.88rem;
             white-space: pre;
-            color: #D7DAE3;
+            overflow-x: auto;
+            color: var(--kinari);
         }
-
-        .post-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .post-content h2 {
-            color: #EFF1F6;
-            font-size: 1.75rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .post-content h3 {
-            color: #EFF1F6;
-            font-size: 1.4rem;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .post-content p {
-            color: #9AA1B2;
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-        }
-
-        .post-content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 2rem auto;
-            border-radius: 8px;
-        }
-
-        .post-content ul {
-            margin: 1rem 0 1.5rem 1.5rem;
-            color: #9AA1B2;
-        }
-
-        .post-content li {
-            margin-bottom: 0.5rem;
-            line-height: 1.7;
-        }
-
-        .post-header {
-            margin-bottom: 2rem;
-        }
-
-        .post-title {
-            font-size: 2.5rem;
-            color: #EFF1F6;
-            margin-bottom: 1rem;
-        }
-
-        .post-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .post-date {
-            color: #9AA1B2;
-        }
-
-        .post-category {
-            color: #9D8CFF;
-            font-weight: 500;
-        }
-
-        /* Math styling */
         mjx-container {
             overflow-x: auto;
             overflow-y: hidden;
         }
-
-        .blog-post-full {
-            background: #151823;
-            padding: 3rem;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        }
-
-        @media (max-width: 768px) {
-            .blog-post-full {
-                padding: 1.5rem;
-            }
-
-            .post-title {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
-<body>
+<body class="">
     <header class="header">
-        <nav class="nav">
+        <a class="masthead" href="../index.html">Taiki Papandreou</a>
+        <nav class="nav" aria-label="Main">
             <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../projects.html" class="nav-link">Projects</a></li>
-                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="../blog.html" class="nav-link" aria-current="page">Blog</a></li>
+                <li><a href="../assets/Taiki_CV.pdf" class="nav-link">CV</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="blog-post-detail">
             <div class="container">
-                <a href="../blog.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Blog</a>
+                <a href="../blog.html" class="back-link">All posts</a>
 
                 <article class="blog-post-full">
                     <header class="post-header">
-                        <div class="post-meta">
-                            <span class="post-date">October 27, 2024</span>
-                            <span class="post-category">AI & Machine Learning</span>
-                        </div>
+                        <p class="post-date"><time datetime="2024-10-27">27 October 2024</time>, AI and machine learning</p>
                         <h1 class="post-title">Understanding Attention & Transformers</h1>
                     </header>
 
@@ -480,11 +386,8 @@ voila! We made a 1M parameter language model!</div>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-row">
-                <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
-            </div>
-        </div>
+        <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        
     </footer>
 
     <script src="../script.js" defer></script>

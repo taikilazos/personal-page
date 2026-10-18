@@ -1,0 +1,45 @@
+{
+  "scene": "journey",
+  "note": "Round 3 of the Silk Road leg: checkpoints that keep the ink dragon on screen (G1 over the painted Greek coast, G2 climbing into an oil-painted cloud wall) so the video never crossfades landscapes or draws its own Pegasus.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "g1-coast-dragon",
+      "prompt": "Image 1 is a Chinese ink painting with a soft grey ink dragon chasing a small golden pearl. Image 2 is a heroic oil painting of the Greek coast. Make one painting that keeps the dragon and the golden pearl exactly as in image 1: same position in the upper left of the frame, same size, same soft grey ink brushwork fading into mist, never shiny, never 3D. Below and around them, the land is now the Greek coast painted exactly in the style of image 2: rich oil paint with visible brushstrokes, a rocky headland with olive trees and a small white temple on the right, the deep blue Mediterranean below, warm golden-hour light, the sun as a soft blaze of painted rays near the pearl. The ink dragon flies over this painted coast: two traditions meeting in one picture. Wide horizontal composition. No text, no signature, no border, no photorealism.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/silk-keyframe.jpg",
+        "refs/greek-keyframe.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    },
+    {
+      "label": "g2-cloud-wall",
+      "prompt": "Image 1 shows the soft grey ink dragon. Image 2 is a heroic oil painting whose style, colours and clouds must be matched exactly: deep cobalt sky, hard sunlight, sculpted white cumulus with visible confident brushstrokes. Make a painting in the style of image 2: towering sunlit cumulus clouds fill most of the frame from the bottom and the right, deep cobalt blue sky above on the left. The ink dragon from image 1, same soft grey ink brushwork, climbs upward into the clouds; its head and front coils are already disappearing inside the bright cloud, only its long body and tail still visible curving below. No horse, no other creatures. Wide horizontal composition. No text, no signature, no border, no photorealism, no 3D.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/silk-keyframe.jpg",
+        "refs/pegasus-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    }
+  ]
+}

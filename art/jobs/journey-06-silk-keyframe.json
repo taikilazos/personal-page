@@ -1,0 +1,24 @@
+{
+  "scene": "journey",
+  "note": "Checkpoint still for the Silk Road journey: the same ink dragon over ink-painted dunes, so the video keeps the dragon's style.",
+  "prompt": "The attached image is a Chinese ink and blue-green landscape painting on aged rice paper with an ink dragon. Make a new painting by the same hand, in exactly the same style: same aged paper, same loose grey ink brushwork, same pale washes. The same dragon, painted exactly as in the attached image (soft grey ink, scales only suggested by light brush marks, partly fading into mist, never shiny, never 3D), flies from right to left across the upper part of the picture, following a small softly glowing golden pearl ahead of it on the left. Below, the mountains have given way to the rolling sand dunes of the Silk Road, painted in ink with a pale ochre wash, and a small caravan of camels painted in a few ink strokes crosses the dunes. The last misty ink peaks fade away on the right. Same paper colour, same light, wide horizontal composition, lots of empty paper sky. No seal stamps, no text, no border, no photorealism.",
+  "runs": [
+    {
+      "label": "silk-keyframe",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    }
+  ]
+}

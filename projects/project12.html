@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Code Security Scanner - Project Detail</title>
     <meta name="description" content="Taiki Papandreou - AI engineer in the Netherlands building AI systems that ship into regulated businesses.">
+    <meta name="theme-color" content="#1a2236">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
-    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
-    <script>document.documentElement.classList.add('js-reveal');</script>
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/shippori-mincho-500.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/zen-kaku-gothic-400.woff2" crossorigin>
     
 </head>
-<body>
+<body class="">
     <header class="header">
-        <nav class="nav">
+        <a class="masthead" href="../index.html">Taiki Papandreou</a>
+        <nav class="nav" aria-label="Main">
             <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../projects.html" class="nav-link" aria-current="page">Projects</a></li>
                 <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="../assets/Taiki_CV.pdf" class="nav-link">CV</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="project-detail-page">
             <div class="container">
-                <a href="../projects.html" class="btn btn-secondary" style="margin-bottom:2rem;">&larr; Back to Projects</a>
-                <h1 class="section-title">AI Code Security Scanner</h1>
+                <a href="../projects.html" class="back-link">All projects</a>
+                <h1 class="detail-title">AI Code Security Scanner</h1>
                 <div class="detail-content">
                     <h4>Project Overview</h4>
                     <p>A one-day prototype. A read-only scanner that reviews a codebase for security problems, built end to end in about a day.</p>
@@ -44,12 +46,8 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-row">
-                <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
-                
-            </div>
-        </div>
+        <p>&copy; <span class="copyright-year"></span> Taiki Papandreou</p>
+        
     </footer>
 
     <script src="../script.js" defer></script>

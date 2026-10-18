@@ -5,8 +5,8 @@ This is Taiki Papandreou's personal portfolio website, hosted on GitHub Pages.
 URL: https://taikilazos.github.io/personal-page
 
 ## Stack
-- Plain HTML/CSS/JS — no build tools, no framework
-- Static files served directly via GitHub Pages
+- Plain HTML/CSS/JS, no framework; a zero-dependency `build.py` assembles pages from `_pages/` + `_templates/`
+- Static files served directly via GitHub Pages (built pages are committed)
 - One page per project in `/projects/`, one per blog post in `/blog/`
 
 ## Owner Info
@@ -26,10 +26,13 @@ URL: https://taikilazos.github.io/personal-page
 - `blog/` — individual blog post pages
 - `styles.css` — global styles
 - `script.js` — global JS
-- `assets/` — PDFs, images
+- `myth.js` — homepage artwork (scene loops + scroll-scrubbed journeys film)
+- `assets/` — PDFs, images, fonts, `myth-film/` videos
+- `art/` — how the artwork was generated (fal.ai jobs, cost ledger, picks)
 
 ## Conventions
-- Keep it simple — no frameworks or build steps
-- New projects: create `projects/projectN.html` based on `projects/template.html`
-- New blog posts: create `blog/<slug>.html` based on `blog/template.html`
+- Keep it simple — no frameworks; edit `_pages/`, then run `python3 build.py`
+- New projects: copy `_templates/new-project.html` to `_pages/projects/projectN.html`
+- New blog posts: copy `_templates/new-post.html` to `_pages/blog/<slug>.html`
+- Preview with `python3 serve.py` (Range support, needed for the homepage film)
 - Footer copyright year should stay current

@@ -1,0 +1,63 @@
+{
+  "scene": "journey",
+  "note": "Silk Road journey redone in two parts through an ink checkpoint, so the dragon keeps its ink style (part A ink to ink, part B the style change after the dragon dissolves).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "silk-a-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A Chinese ink painting on aged rice paper slowly comes alive; every frame stays a flat ink brush painting on the same paper. A small golden pearl appears and drifts west, and the ink dragon, painted in soft grey ink exactly as at the start, never shiny, never 3D, never detailed, glides after it with slow gentle undulations, partly fading in and out of the mist. The camera drifts slowly west: the misty blue-green peaks sink away and ink-painted sand dunes with a pale ochre wash spread out below, with a small caravan of camels and a distant watchtower. Calm, slow, painterly.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/silk-keyframe.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "silk-a-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A Chinese ink painting on aged rice paper slowly comes alive; every frame stays a flat ink brush painting on the same paper. A small golden pearl appears and drifts west, and the ink dragon, painted in soft grey ink exactly as at the start, never shiny, never 3D, never detailed, glides after it with slow gentle undulations, partly fading in and out of the mist. The camera drifts slowly west: the misty blue-green peaks sink away and ink-painted sand dunes with a pale ochre wash spread out below, with a small caravan of camels and a distant watchtower. Calm, slow, painterly.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/silk-keyframe.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "silk-b-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly journey west. The soft ink dragon dissolves into a long ribbon of golden mist that streams after the pearl. The ink dunes give way to a deep blue Mediterranean sea and a Greek mountain with a small white temple; the golden pearl grows into the sun. The pale ink wash slowly warms and thickens into rich heroic oil paint, and in front of the sun, out of sunlit white clouds, a powerful white winged horse, Pegasus, rears up in a deep cobalt sky with its wings spread. No photorealism, no 3D.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "silk-b-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly journey west. The soft ink dragon dissolves into a long ribbon of golden mist that streams after the pearl. The ink dunes give way to a deep blue Mediterranean sea and a Greek mountain with a small white temple; the golden pearl grows into the sun. The pale ink wash slowly warms and thickens into rich heroic oil paint, and in front of the sun, out of sunlit white clouds, a powerful white winged horse, Pegasus, rears up in a deep cobalt sky with its wings spread. No photorealism, no 3D.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    }
+  ]
+}

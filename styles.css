@@ -1,690 +1,687 @@
 /* ==========================================================================
-   Design tokens — dark aurora: near-black canvas, violet-cyan signature
+   Taiki Papandreou. Set like a Japanese printed book: indigo ground (ai),
+   unbleached-paper text (kinari), vermilion only where a seal would go (shu).
+   Headings in a mincho serif, body in its gothic companion.
    ========================================================================== */
 :root {
-    --bg: #0C0E14;
-    --bg-alt: #12141D;
-    --surface: #151823;
-    --text: #EFF1F6;
-    --text-muted: #9AA1B2;
-    --border: rgba(255, 255, 255, 0.09);
-    --accent: #8B7CFF;
-    --accent-bright: #9D8CFF;
-    --accent-strong: #6E5CE8;
-    --accent-soft: rgba(139, 124, 255, 0.14);
-    --cyan: #2DD4FF;
-    --gradient: linear-gradient(135deg, #8B7CFF 0%, #2DD4FF 100%);
-    --gradient-flow: linear-gradient(120deg, #8B7CFF, #2DD4FF, #8B7CFF);
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-    --shadow-accent: 0 8px 32px rgba(139, 124, 255, 0.25);
-    --radius: 14px;
+    --ai: #1a2236;            /* indigo, the night of the woodblock print */
+    --ai-deep: #121829;
+    --kinari: #ede6d5;        /* unbleached paper */
+    --kinari-dim: #c9c3b4;
+    --usuzumi: #9ea4b3;       /* thinned ink, for secondary text */
+    --shu: #c9452c;           /* torii vermilion, seals and link rules only */
+    --sumi: #1f2023;          /* ink, for words set on the pale scroll */
+    --rule: rgba(237, 230, 213, 0.16);
+
+    --mincho: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Songti SC', Georgia, serif;
+    --gothic: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', system-ui, sans-serif;
+
+    --gutter: clamp(16px, 4vw, 48px);
+    --edge: max(var(--gutter), calc((100% - 1120px) / 2 + var(--gutter)));   /* lines up with .container */
 }
 
-/* Reset and base styles */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: var(--bg);
+    font-family: var(--gothic);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--kinari);
+    background: var(--ai);
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Drifting aurora glow */
-body::before {
-    content: '';
-    position: fixed;
-    inset: -30%;
-    z-index: -2;
-    pointer-events: none;
-    background:
-        radial-gradient(42% 38% at 18% 30%, rgba(139, 124, 255, 0.20), transparent 62%),
-        radial-gradient(38% 34% at 82% 24%, rgba(45, 212, 255, 0.14), transparent 62%),
-        radial-gradient(46% 40% at 55% 88%, rgba(255, 92, 168, 0.10), transparent 64%);
-    animation: aurora-drift 45s ease-in-out infinite alternate;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-@keyframes aurora-drift {
-    from { transform: translate3d(-3%, -2%, 0) scale(1); }
-    to { transform: translate3d(3%, 2%, 0) scale(1.06); }
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--shu);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.28em;
 }
 
-/* Fine film-grain so the dark never bands */
-body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.6"/></svg>');
+a:hover {
+    text-decoration-thickness: 2px;
 }
 
-/* Container */
+:focus-visible {
+    outline: 2px solid var(--shu);
+    outline-offset: 3px;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--gutter);
 }
 
-/* ==========================================================================
-   Header and navigation
-   ========================================================================== */
+/* ---------- masthead and navigation ---------- */
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(12, 14, 20, 0.7);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.4rem var(--edge);
+    border-bottom: 1px solid var(--rule);
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.masthead {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
 }
 
 .nav-menu {
     display: flex;
+    gap: 1.75rem;
     list-style: none;
-    gap: 2.5rem;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.25s ease;
-    position: relative;
+    color: var(--usuzumi);
+    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: var(--text);
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+    color: var(--kinari);
 }
 
-.nav-link.active {
-    color: var(--text);
-    font-weight: 600;
+.nav-link[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--shu);
+    text-decoration-thickness: 2px;
 }
 
-.nav-link.active::after {
-    content: '';
+/* on the homepage the masthead floats over the film */
+.home .header {
     position: absolute;
-    bottom: -0.45rem;
+    top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--gradient-flow);
-    background-size: 200% 200%;
-    animation: gradient-sheen 8s ease infinite;
+    z-index: 10;
+    border-bottom: 0;
+    text-shadow: 0 1px 10px rgba(8, 11, 20, 0.7);
 }
 
-@keyframes gradient-sheen {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.home .nav-link {
+    color: var(--kinari-dim);
 }
 
-/* Main content */
 .main {
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 160px);
 }
 
-/* ==========================================================================
-   Hero section
-   ========================================================================== */
-.hero {
-    padding: 6.5rem 0 4rem;
+/* ---------- page heads (projects, blog) ---------- */
+.page-head {
+    padding: clamp(3.5rem, 8vw, 6rem) 0 2rem;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 260px;
-    gap: 5rem;
-    align-items: center;
-    text-align: left;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.75rem;
-}
-
-.hero-photo {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-eyebrow {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent-bright);
-}
-
-.hero-lede {
-    font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-    color: var(--text-muted);
-    max-width: 34ch;
-    line-height: 1.5;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border: 2px solid transparent;
-    transition: transform 0.25s ease, box-shadow 0.25s ease,
-                background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-}
-
-.btn-primary {
-    background: #F2F4F8;
-    color: #0C0E14;
-    box-shadow: 0 6px 24px rgba(139, 124, 255, 0.28);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(139, 124, 255, 0.4);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--accent-bright);
-    border-color: var(--accent);
-}
-
-.btn-secondary:hover {
-    background: var(--accent);
-    color: #0C0E14;
-    transform: translateY(-2px);
-}
-
-.profile-photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 4px rgba(139, 124, 255, 0.35), 0 12px 44px rgba(139, 124, 255, 0.28);
-}
-
-/* ==========================================================================
-   Section headings
-   ========================================================================== */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--text);
-    letter-spacing: -0.03em;
-}
-
-.home-heading {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent-bright);
-    margin-bottom: 1.5rem;
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.footer {
-    background: #0A0B10;
-    color: #8B90A0;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-    border-top: 1px solid var(--border);
-}
-
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-/* ==========================================================================
-   Projects page
-   ========================================================================== */
-.projects-hero {
-    padding: 4rem 0 2rem;
-    text-align: center;
-}
-
-.projects-grid {
-    padding: 3rem 0;
-}
-
-.projects-description {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    text-align: center;
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(139, 124, 255, 0.5);
-    box-shadow: var(--shadow-accent);
-}
-
-.project-image {
-    height: 200px;
-    background: var(--bg-alt);
-    position: relative;
-}
-
-.project-placeholder {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    padding: 0 1.5rem;
-    text-align: center;
-}
-
-.project-screenshot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.project-content {
-    padding: 1.5rem;
-}
-
-.project-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    color: var(--text);
-}
-
-.project-description {
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.tech-tag {
-    background: var(--accent-soft);
-    color: #B9A9FF;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
+.page-head h1 {
+    font-family: var(--mincho);
     font-weight: 500;
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: 0.005em;
+    margin-bottom: 1rem;
 }
 
-.project-links {
+.page-head p {
+    max-width: 36rem;
+    color: var(--usuzumi);
+}
+
+/* ---------- projects: a catalogue, client work first ---------- */
+.work {
+    padding-bottom: 5rem;
+}
+
+.work-group {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--kinari-dim);
+    padding-top: 1.1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--kinari-dim);
+}
+
+.work-item {
+    padding: 2rem 0 2.1rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.work-item:last-child {
+    border-bottom: 0;
+}
+
+.work-item .work-text {
+    max-width: 44rem;
+}
+
+.work-item.has-image {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 44rem);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.work-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--kinari);
+    border-radius: 2px;
+}
+
+.work-item h3 {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: 1.55rem;
+    line-height: 1.3;
+    margin-bottom: 0.7rem;
+}
+
+.work-item h3 a {
+    text-decoration: none;
+}
+
+.work-item h3 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--shu);
+}
+
+.work-stack {
+    margin-top: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--usuzumi);
+}
+
+.work-links {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 0.4rem 1.6rem;
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
 }
 
-.btn-small {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.85rem;
+/* ---------- blog list ---------- */
+.posts {
+    padding-bottom: 5rem;
 }
 
-/* Project detail pages */
-.project-detail-page {
-    padding: 3rem 0;
+.post-item {
+    max-width: 44rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--kinari-dim);
 }
 
-.detail-content {
-    margin-top: 1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow-sm);
+.post-item h2 {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: 1.65rem;
+    line-height: 1.3;
+    margin: 0.35rem 0 0.75rem;
 }
 
-.detail-content h4 {
-    color: var(--text);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
+.post-item h2 a {
+    text-decoration: none;
 }
 
-.detail-content h4:first-child {
-    margin-top: 0;
-}
-
-.detail-content p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.detail-content ul {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-}
-
-.detail-content li {
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-/* ==========================================================================
-   Blog page
-   ========================================================================== */
-.blog-post-detail {
-    padding: 3rem 0;
-}
-
-.blog-hero {
-    padding: 4rem 0 2rem;
-    text-align: center;
-}
-
-.blog-description {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.blog-posts {
-    padding: 3rem 0;
-}
-
-.posts-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.blog-post {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    border-radius: var(--radius);
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.blog-post:hover {
-    border-color: rgba(139, 124, 255, 0.5);
-    box-shadow: var(--shadow-accent);
-}
-
-.post-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+.post-item h2 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--shu);
 }
 
 .post-date {
-    color: var(--text-muted);
+    font-size: 0.92rem;
+    color: var(--usuzumi);
 }
 
-.post-category {
-    color: var(--accent-bright);
-    font-weight: 600;
+/* ---------- reading pages (project case studies, blog posts) ---------- */
+.project-detail-page,
+.blog-post-detail {
+    padding: 2.5rem 0 5rem;
 }
 
+.back-link {
+    font-size: 0.92rem;
+    color: var(--usuzumi);
+}
+
+.detail-title,
 .post-title {
-    margin-bottom: 1rem;
-}
-
-.post-title a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.post-title a:hover {
-    color: var(--accent-bright);
-}
-
-.post-excerpt {
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    color: var(--accent-bright);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   Homepage sections
-   ========================================================================== */
-.home-section {
-    padding: 3.5rem 0;
-}
-
-.home-narrow {
-    max-width: 780px;
-}
-
-.home-lede-line {
-    font-size: 1.35rem;
-    line-height: 1.65;
+    font-family: var(--mincho);
     font-weight: 500;
-    color: var(--text);
+    font-size: clamp(2.2rem, 4.5vw, 3.3rem);
+    line-height: 1.15;
+    max-width: 22ch;
+    margin: 2rem 0 2.5rem;
 }
 
-.home-lede-line strong {
-    font-weight: 700;
+.post-header .post-date {
+    margin-top: 2rem;
 }
 
-.home-contact-section {
-    text-align: center;
+.post-header .post-title {
+    margin-top: 0.5rem;
 }
 
-.home-contact {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.9;
+.detail-content,
+.post-content {
+    max-width: 42rem;
 }
 
-.home-contact a {
-    color: var(--accent-bright);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(139, 124, 255, 0.35);
-    transition: border-color 0.25s ease;
+.detail-content h4,
+.post-content h2,
+.post-content h3 {
+    font-family: var(--mincho);
+    font-weight: 500;
+    line-height: 1.35;
+    margin: 2.75rem 0 0.8rem;
 }
 
-.home-contact a:hover {
-    border-color: var(--accent-bright);
+.detail-content h4,
+.post-content h3 {
+    font-size: 1.35rem;
+}
+
+.post-content h2 {
+    font-size: 1.7rem;
+}
+
+.detail-content > :first-child,
+.post-content > :first-child {
+    margin-top: 0;
+}
+
+.detail-content p,
+.post-content p {
+    margin-bottom: 1.15rem;
+    line-height: 1.85;
+}
+
+.detail-content ul,
+.detail-content ol,
+.post-content ul,
+.post-content ol {
+    margin: 0 0 1.4rem 1.25rem;
+}
+
+.detail-content li,
+.post-content li {
+    margin-bottom: 0.45rem;
+    padding-left: 0.25rem;
+}
+
+.detail-content li::marker,
+.post-content li::marker {
+    color: var(--shu);
+}
+
+.post-content img {
+    margin: 2rem auto;
+    height: auto;
+    border-radius: 2px;
+}
+
+/* ---------- footer ---------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    padding: 1.6rem var(--edge);
+    border-top: 1px solid var(--rule);
+    background: var(--ai-deep);
+    font-size: 0.88rem;
+    color: var(--usuzumi);
 }
 
 /* ==========================================================================
-   Entrance and scroll-reveal motion
+   Homepage: the journey film, with the words set straight onto it
    ========================================================================== */
-.hero-text > * {
-    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+.myth {
+    position: relative;
 }
 
-.hero-text > *:nth-child(1) { animation-delay: 0.05s; }
-.hero-text > *:nth-child(2) { animation-delay: 0.15s; }
-.hero-text > *:nth-child(3) { animation-delay: 0.25s; }
-.hero-text > *:nth-child(4) { animation-delay: 0.35s; }
-
-.hero-photo {
-    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards;
+.myth-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--ai-deep);
 }
 
-@keyframes rise {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: none; }
+/* the journey film and the three scene loops fill the screen, framed on the right where the
+   creatures are; a scene loop sits on top of the film while you are inside that scene */
+.myth-film,
+.myth-loop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% center;
 }
 
-.js-reveal .reveal {
+.myth-loop {
     opacity: 0;
-    transform: translateY(28px);
+    transition: opacity 0.45s ease;
 }
 
-.js-reveal .reveal.is-visible {
+.myth-loop.is-on {
     opacity: 1;
-    transform: none;
-    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero-text > *,
-    .hero-photo,
-    body::before,
-    .nav-link.active::after {
-        animation: none;
-    }
+/* a soft wash behind the words: indigo on the night and sky scenes, paper on the scroll */
+.myth-scrim::before,
+.myth-scrim::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.8s ease;
+}
 
-    .js-reveal .reveal {
-        opacity: 1;
-        transform: none;
-    }
+.myth-scrim::before {
+    background: linear-gradient(90deg, rgba(18, 24, 41, 0.72), rgba(18, 24, 41, 0.3) 42%, transparent 62%);
+}
 
-    .js-reveal .reveal.is-visible {
-        transition: none;
-    }
+.myth-scrim::after {
+    background: linear-gradient(90deg, rgba(236, 228, 210, 0.7), rgba(236, 228, 210, 0.25) 42%, transparent 62%);
+    opacity: 0;
+}
+
+.myth-stage[data-tone="light"] .myth-scrim::before {
+    opacity: 0;
+}
+
+.myth-stage[data-tone="light"] .myth-scrim::after {
+    opacity: 1;
+}
+
+.myth-chapters {
+    position: relative;
+    z-index: 1;
+    margin-top: -100vh;
+}
+
+.chapter {
+    min-height: 140vh;
+    display: flex;
+    align-items: center;
+}
+
+.chapter > .container {
+    width: 100%;
+}
+
+.chapter-intro,
+.chapter-final {
+    min-height: 100vh;
+}
+
+/* empty stretches of scroll where a journey film plays between two chapters */
+.chapter-journey {
+    min-height: 240vh;
+}
+
+.chapter-text {
+    position: relative;
+    max-width: 29rem;
+    text-shadow: 0 1px 14px rgba(10, 14, 24, 0.85);
+    transition: opacity 0.45s ease;
+}
+
+.myth .chapter-text.is-hidden {
+    opacity: 0;
+}
+
+.chapter-text p {
+    margin-top: 1rem;
+}
+
+.myth-name {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: clamp(3rem, 7vw, 5.4rem);
+    line-height: 1.02;
+    letter-spacing: 0.005em;
+    max-width: 8ch;
+}
+
+.lede {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.lede + p {
+    color: var(--kinari-dim);
+}
+
+.myth .scroll-cue {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--kinari-dim);
+}
+
+.scroll-cue::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 3rem;
+    margin: 0.6rem 0 0 0.15rem;
+    background: var(--kinari-dim);
+}
+
+/* a red hanko seal, carved with the creature's name, as on East Asian prints and scrolls */
+.seal {
+    display: grid;
+    place-items: center;
+    width: 3.1rem;
+    height: 3.1rem;
+    margin-bottom: 1.5rem;
+    background: var(--shu);
+    color: #f7efe0;
+    font-family: 'Shippori Mincho Seals', var(--mincho);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 3px var(--shu), inset 0 0 0 4.5px rgba(247, 239, 224, 0.85);
+    transform: rotate(-2deg);
+}
+
+/* Pegasus is Greek: no seal, its name in its own script instead */
+.native {
+    display: block;
+    margin-bottom: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;   /* Japanese fonts set Greek full-width */
+    font-size: 1.45rem;
+    color: var(--kinari-dim);
+}
+
+.chapter-title {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    line-height: 1.05;
+}
+
+.chapter-text .chapter-role {
+    margin-top: 0.35rem;
+    font-family: var(--mincho);
+    font-size: 1.3rem;
+    color: var(--kinari-dim);
+}
+
+/* the dragon chapter sits on pale rice paper, so its words are ink */
+.chapter-light .chapter-text {
+    color: var(--sumi);
+    text-shadow: 0 1px 12px rgba(240, 233, 216, 0.95);
+}
+
+.chapter-light .chapter-text .chapter-role {
+    color: #4b4c4f;
+}
+
+/* the last page of a Japanese book: the okuzuke colophon, in a ruled frame */
+.myth .colophon {
+    max-width: 34rem;
+    padding: 1.75rem 2rem 1.6rem;
+    background: var(--ai);
+    border: 3px double rgba(237, 230, 213, 0.55);
+    text-shadow: none;
+}
+
+.colophon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.colophon-head h2 {
+    font-family: var(--mincho);
+    font-weight: 500;
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+.colophon-photo {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.colophon dl {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0.55rem 1.25rem;
+    padding: 1.1rem 0;
+    font-size: 0.97rem;
+    line-height: 1.6;
+}
+
+.colophon dt {
+    color: var(--usuzumi);
+}
+
+.myth .colophon-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.6rem;
+    margin-top: 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.97rem;
 }
 
 /* ==========================================================================
-   Responsive
+   Small screens
    ========================================================================== */
-@media (max-width: 768px) {
-    .nav {
-        padding: 1rem;
-    }
-
-    .nav-menu {
-        gap: 1.5rem;
-    }
-
-    .hero {
-        padding: 4rem 0 3rem;
-    }
-
-    .hero-content {
+@media (max-width: 820px) {
+    .work-item.has-image {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: left;
+        gap: 1.25rem;
     }
 
-    .hero-text {
-        text-align: left;
-    }
-
-    .hero-photo {
-        justify-content: flex-start;
-        order: -1;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .hero-buttons {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .home-section {
-        padding: 2.5rem 0;
-    }
-
-    .home-lede-line {
-        font-size: 1.15rem;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-
-    .project-links {
-        flex-direction: row;
-    }
-
-    .container {
-        padding: 0 1rem;
+    .work-image img {
+        max-width: 22rem;
     }
 }
 
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    .header {
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
     }
 
     .nav-menu {
         gap: 1.25rem;
     }
 
-    .blog-post,
-    .detail-content {
-        padding: 1.5rem;
+    /* on phones the art fills the top of the screen and each chapter's words ride at the bottom */
+    .chapter {
+        align-items: stretch;
+    }
+
+    .chapter > .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 60vh;
+        padding-bottom: 5vh;
+    }
+
+    .chapter-text {
+        position: sticky;
+        bottom: 5vh;
+    }
+
+    .chapter-intro > .container,
+    .chapter-final > .container {
+        padding-top: 0;
+    }
+
+    .chapter-final > .container {
+        justify-content: center;
+    }
+
+    .chapter-final .chapter-text {
+        position: relative;
+        bottom: auto;
+    }
+
+    .myth-scrim::before {
+        background: linear-gradient(0deg, rgba(18, 24, 41, 0.88), rgba(18, 24, 41, 0.4) 42%, transparent 62%);
+    }
+
+    .myth-scrim::after {
+        background: linear-gradient(0deg, rgba(236, 228, 210, 0.9), rgba(236, 228, 210, 0.45) 42%, transparent 62%);
+    }
+
+    .myth .colophon {
+        padding: 1.4rem 1.25rem 1.25rem;
+    }
+
+    .colophon dl {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .colophon dd + dt {
+        margin-top: 0.6rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .masthead {
+        font-size: 1.02rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
     }
 }

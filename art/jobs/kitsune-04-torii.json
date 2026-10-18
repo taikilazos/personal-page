@@ -1,0 +1,27 @@
+{
+  "scene": "kitsune",
+  "note": "Round 3: Inari torii instead of a gate hall, shrine in the back, foxes with key and jewel, darker heavier rain. Anchored on kitsune-02 refs-1 (the favourite) plus a Koitsu and two Hasui prints.",
+  "prompt": "The attached images are guides for the art style only. The first one shows the look we want most: keep its colours, print texture, rain and wet stone reflections. The others are real shin-hanga prints, for colour and atmosphere. Do not copy their scenes; make this new scene. An authentic shin-hanga woodblock print in the manner of Kawase Hasui and Tsuchiya Koitsu, about 1930, as a scanned museum print. Rainy dusk at an Inari fox shrine, darker and heavier rain than usual. Composition, seen nearly straight on from a wet stone path at eye level: A large vermilion Inari torii gate, myojin style with a black top beam and black base wraps, stands right of centre, facing the viewer squarely and framing the path. Behind it, a short tunnel of smaller vermilion torii climbs a few stone steps. At the end of the path, in the back, a vermilion Inari shrine hall with a dark tiled roof and warmly lit lanterns, half veiled by rain and mist. In front of the big torii, two white stone kitsune fox guardians with red cloth bibs sit on tall stone pedestals, one on each side, facing forward and looking straight at the viewer. The left fox holds a key in its mouth, the right fox a jewel. Stone lanterns along the path, one lit. Tall dark cedars on both sides, a pine branch hanging over the top right. The wet flagstones in the foreground mirror the red torii and the lamplight in long vertical reflections. Atmosphere: heavy rain as long fine white lines, deep blue-grey sky darker toward the top, mist between the trees, the only warm light from the lanterns. Print qualities: about six printed colours (deep blue-grey, vermilion, dark pine green, stone grey, ivory, warm lamp yellow), flat colour with soft bokashi gradients, crisp carved keylines, woodgrain in the sky, washi paper fibres, slight colour misregistration, matte ink. The left third is open misty sky and distant trees, calm, kept empty for text. Not a digital painting, no 3D, no photorealism, no glow. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "sunburst-torii",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-refs1.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg",
+        "refs/hasui/gate-pine-rain.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 4,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.29
+    }
+  ]
+}

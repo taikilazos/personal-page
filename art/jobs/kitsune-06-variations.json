@@ -1,0 +1,175 @@
+{
+  "scene": "kitsune",
+  "note": "Round 5: eight creative variations on the two favourites (a-tunnel-2, c-visitor-2). Calmer traditional fox faces.",
+  "prompt": "The attached images are guides for the art style only. The first two show exactly the look and mood we want: their colours, print texture, rain, darkness, mist and wet stone reflections. The others are real shin-hanga prints, for colour and atmosphere. Do not copy any of their exact scenes. Make an authentic Japanese shin-hanga woodblock print in the manner of Kawase Hasui and Tsuchiya Koitsu, about 1930, as a scanned museum print. An Inari fox shrine deep in a cedar forest at night. Mysterious and quiet: much of the scene is lost in darkness and mist, and only a few things are lit. Asymmetrical, off-centre composition with architecture cropped by the frame. Any stone fox statues have calm, simple, traditional Inari statue faces: gentle stylised features, closed or softly narrowed eyes, not realistic and not snarling. About six printed colours (deep blue-grey, vermilion, dark pine green, stone grey, ivory, warm lamp yellow), flat colour with soft bokashi gradients, crisp carved keylines, woodgrain in the sky, washi paper fibres, slight colour misregistration, matte ink. The left third of the image is open misty darkness and distant cedars, calm, kept empty for text. Not a digital painting, no 3D, no photorealism, no glow effects. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "1-climb",
+      "prompt": "Scene: heavy rain. A lone figure in a dark kimono with a blue paper umbrella, seen from behind, climbs wet stone steps up into a long tunnel of vermilion torii. Deep inside the tunnel one stone lantern glows. A stone kitsune fox with a red bib sits on a pedestal at the right edge, watching the path.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "2-foxfire",
+      "prompt": "Scene: light rain. Up the dark stone steps of a long vermilion torii tunnel, small pale blue-white fox-fire flames (kitsunebi) float in a slow silent line, like a procession, lighting the wet steps faintly. No people. The end of the tunnel is lost in mist.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "3-real-kitsune",
+      "prompt": "Scene: light rain. Looking up a long vermilion torii tunnel of wet stone steps. At the very top, small and far away, a living white fox with nine flowing tails stands dark against the glow of a single lantern, looking back toward the viewer. It is easy to miss. A stone kitsune statue sits at the right edge in the foreground.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "4-looking-back",
+      "prompt": "Scene: from the top of a vermilion torii tunnel looking back down the wet stone steps toward a misty valley far below. In the foreground at the right, a stone kitsune fox with a red bib is seen from behind, keeping watch over the path. A few lit lanterns along the steps. Rain.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "5-snow",
+      "prompt": "Scene: the same kind of vermilion torii tunnel on a mountain path on a silent snowy night. Snow is falling in soft white flakes, snow lies on the tops of the torii and on the stone steps, one stone lantern glows warm inside the tunnel. A stone kitsune fox with a red bib, capped with snow, sits at the right edge.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "6-moon",
+      "prompt": "Scene: the rain has just stopped. A pale full moon shows through mist between tall cedars. The wet stone steps of a vermilion torii tunnel shine silver in the moonlight, the torii almost black against the mist. One small lantern. A stone kitsune fox sits in shadow at the right edge.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "7-fox-mask",
+      "prompt": "Scene: close view of a vermilion torii pillar on the right, with a white painted kitsune mask with red markings hanging on it by a red cord, beside small wooden ema prayer plaques and red ribbons wet with rain. Behind it, the torii tunnel recedes into darkness and mist with one lantern glowing far inside.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    },
+    {
+      "label": "8-fox-shrine",
+      "prompt": "Scene: a small side shrine (hokora) on the right among the cedars, crowded with many small white stone fox statues wearing red bibs, lit by a few candles and a lantern. A lone figure with a blue paper umbrella stands quietly before them, seen from behind. Behind, the torii tunnel winds away into the misty dark. Rain.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-favourite-tunnel2.jpg",
+        "refs/kitsune-favourite-visitor2.jpg",
+        "refs/koitsu-rain-temple.jpg",
+        "refs/hasui/shrine-rain-red.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.07
+    }
+  ]
+}

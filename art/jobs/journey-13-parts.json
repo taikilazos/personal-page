@@ -1,0 +1,91 @@
+{
+  "scene": "journey",
+  "note": "Round 3 Silk Road leg: dunes -> painted coast via a mist wall (dragon stays), coast -> cloud wall (dragon climbs in), cloud wall -> Pegasus uncovered by parting clouds. 2 seeds each.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "b1-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The soft grey ink dragon and the small golden pearl keep flying steadily in the upper part of the frame, staying the same size and shape. Below them, a great rolling wall of golden mist sweeps across the land from right to left; where it has passed, the desert is gone and the painted Greek coast is there: the deep blue sea, a rocky headland with olive trees and a white temple, the blazing low sun. The paper and ink of the picture warm into rich oil paint as the mist passes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/g1-coast-dragon.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "b1-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The soft grey ink dragon and the small golden pearl keep flying steadily in the upper part of the frame, staying the same size and shape. Below them, a great rolling wall of golden mist sweeps across the land from right to left; where it has passed, the desert is gone and the painted Greek coast is there: the deep blue sea, a rocky headland with olive trees and a white temple, the blazing low sun. The paper and ink of the picture warm into rich oil paint as the mist passes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/g1-coast-dragon.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "b2a-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The camera tilts slowly upward, following the dragon as it climbs into the sky in long undulating coils; the Greek coast and the sea sink out of the frame below, and towering sunlit white cumulus clouds rise up, painted in heroic oil paint under a deep cobalt sky. The dragon's head reaches the clouds and begins to vanish into them.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/g1-coast-dragon.jpg",
+        "end_image_url": "file:refs/g2-cloud-wall.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "b2a-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The camera tilts slowly upward, following the dragon as it climbs into the sky in long undulating coils; the Greek coast and the sea sink out of the frame below, and towering sunlit white cumulus clouds rise up, painted in heroic oil paint under a deep cobalt sky. The dragon's head reaches the clouds and begins to vanish into them.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/g1-coast-dragon.jpg",
+        "end_image_url": "file:refs/g2-cloud-wall.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "b2b-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The last coils of the dragon slip into the bright clouds and are gone. The great clouds then drift slowly apart to both sides like curtains opening, and behind them a white winged horse is uncovered, already there, rearing in the deep cobalt sky above the clouds with its great wings spread; the horse is revealed by the clouds moving away, it does not form, grow or change shape. Heroic oil painting with visible brushstrokes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/g2-cloud-wall.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "b2b-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "Every frame is a painting with visible brushwork, never a photograph, never 3D, never a cartoon. No crossfade, no double exposure. The last coils of the dragon slip into the bright clouds and are gone. The great clouds then drift slowly apart to both sides like curtains opening, and behind them a white winged horse is uncovered, already there, rearing in the deep cobalt sky above the clouds with its great wings spread; the horse is revealed by the clouds moving away, it does not form, grow or change shape. Heroic oil painting with visible brushstrokes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/g2-cloud-wall.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    }
+  ]
+}

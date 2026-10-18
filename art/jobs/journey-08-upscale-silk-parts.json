@@ -1,0 +1,31 @@
+{
+  "scene": "journey",
+  "note": "Upscale the chosen two-part Silk Road journey (silk-a-5, silk-b-5).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "up-silk-a",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/silk-a.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.27
+    },
+    {
+      "label": "up-silk-b",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/silk-b.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.27
+    }
+  ]
+}

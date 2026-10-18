@@ -1,0 +1,20 @@
+{
+  "scene": "dragon",
+  "note": "Layers: loop of the clean plate (near plum, cliff and trees are separate layers now).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "dragon-mid-loop",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. A Chinese ink and blue-green landscape painting on rice paper gently comes alive; keep the painted brushwork look in every frame, the dragon stays a flat ink brush painting, never 3D. The ink dragon slowly undulates its coils through the clouds and gently turns its head. Soft mist flows slowly around the mountain peaks and through the dragon's body. The waterfall flows. The lake ripples very gently; the small boat stays where it is. The birds glide slowly. The empty paper sky on the left stays calm. Serene and slow, a seamless loop.",
+      "input": {
+        "image_url": "file:refs/dragon-plate.jpg",
+        "end_image_url": "file:refs/dragon-plate.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.69
+    }
+  ]
+}

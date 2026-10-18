@@ -1,0 +1,19 @@
+{
+  "scene": "journey",
+  "note": "Upscale the chosen Silk Road journey (d2p-silkroad-1) from 768p to true 1080p.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "up-d2p-silkroad",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/d2p-silkroad.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.5
+    }
+  ]
+}

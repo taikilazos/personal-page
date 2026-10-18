@@ -1,0 +1,24 @@
+{
+  "scene": "kitsune",
+  "note": "Round 6: edit of 2-foxfire-1: add a full moon, swap blue ghost-like flames for warm golden kitsunebi (blue teardrops read as hitodama, a bad omen).",
+  "prompt": "Edit this woodblock print. Keep the composition, the art style, the colours, the print texture, the torii tunnel, the stone lanterns, the stone fox statues and the stone steps exactly as they are. Make only these changes: 1. Add a pale full moon high in the upper left sky, softly veiled by thin mist and cloud, with a faint halo, printed in the same flat woodblock style with a soft bokashi glow. Let its cool silver light touch the wet stone steps and the tops of the cedars a little. The heavy rain becomes a light drizzle of fine white lines, so the moon can be seen. 2. Change the blue teardrop-shaped flames into warm golden-amber fox-fires (kitsunebi): small, round, soft glowing orbs, a few fewer than now, floating gently up the steps toward the end of the tunnel, like the fox fires in Hiroshige's print of Oji. They should feel kind and warm, not ghostly. Keep the left third of the image calm and open for text. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "moon-warmfire",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-foxfire-base.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.1
+    }
+  ]
+}

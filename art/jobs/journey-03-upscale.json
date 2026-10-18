@@ -1,0 +1,67 @@
+{
+  "scene": "journey",
+  "note": "Upscale: 768p sources (the video model's native size) to true 1080p detail with SeedVR2. Loops + the two chosen journeys (k2d-mystic-2, d2p-twist-2).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "up-kitsune",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/kitsune.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.33
+    },
+    {
+      "label": "up-dragon",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/dragon.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.33
+    },
+    {
+      "label": "up-pegasus",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/pegasus.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.33
+    },
+    {
+      "label": "up-k2d",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/k2d.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.5
+    },
+    {
+      "label": "up-d2p",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/d2p.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.5
+    }
+  ]
+}

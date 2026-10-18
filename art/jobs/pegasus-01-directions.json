@@ -1,0 +1,67 @@
+{
+  "scene": "pegasus",
+  "note": "Round 1: three directions (from the sea, out of the storm, alone above the clouds). Tiepolo refs from Wikimedia Commons (PD / CC0 / CC BY-SA, used only as a private style guide).",
+  "prompt": "The attached images are 18th-century paintings by Giovanni Battista Tiepolo. Use them only as a guide for the painting style: luminous pale blue sky, soft pink, peach and golden clouds, airy light, loose confident oil brushwork, and the way the white horses are painted with warm shadows and flowing manes. Do not copy their scenes or figures. Make an authentic Italian Baroque oil painting in the manner of Tiepolo, photographed as a museum painting: visible brushstrokes, soft glazes, slight craquelure, warm canvas tone. Pegasus is a white winged horse with large feathered wings, the feathers white shading to warm brown at the tips, a flowing pale mane and tail; graceful, strong and anatomically believable, painted with the same loose brush as the sky, never a modern fantasy illustration. No rider, no people, no other figures. Bright, open, airy and full of light, the lightest of all. Wide horizontal composition. The subject sits on the right; the left third is calm open sky with soft clouds, kept free for text. No text, no signature, no border. Not a digital painting, no 3D, no photorealism.",
+  "runs": [
+    {
+      "label": "a-sea",
+      "prompt": "Scene: at sunrise a white Pegasus rises from a calm sea, wings spread wide, water falling from its hooves, climbing up and to the right. Pink and gold clouds, the light coming from the upper left, the sea far below catching the glow.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/oil/ref-3.jpg",
+        "refs/oil/ref-2.jpg",
+        "refs/oil/ref-1.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    },
+    {
+      "label": "b-storm",
+      "prompt": "Scene: Pegasus bursts upward out of a bank of dark grey storm clouds below into bright golden light above, wings raised high, mane streaming. The bottom of the picture is dark and heavy, the top is luminous: beauty rising out of tragedy.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/oil/ref-3.jpg",
+        "refs/oil/ref-2.jpg",
+        "refs/oil/ref-1.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    },
+    {
+      "label": "c-above",
+      "prompt": "Scene: Pegasus flies alone high above a sea of soft white and pink clouds, small in a huge luminous sky, wings beating, still rising, never landing. A faint sea and coastline far below through gaps in the clouds. Calm, vast, free.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/oil/ref-3.jpg",
+        "refs/oil/ref-2.jpg",
+        "refs/oil/ref-1.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    }
+  ]
+}

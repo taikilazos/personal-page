@@ -1,1 +1,6 @@
 __pycache__/
+art/out/
+art/refs/
+.claude/HANDOFF.md
+art/layers/
+.DS_Store

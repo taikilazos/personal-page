@@ -1,0 +1,26 @@
+{
+  "scene": "dragon",
+  "note": "Layers: clean plate behind the near plum branch, cliff and trees.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "plate",
+      "prompt": "Repaint only the masked (transparent) areas. Remove the red plum blossom branch, the near rocky cliff with pine trees in the bottom right corner and the pine trees at the bottom, and paint what lies behind them: soft drifting white mist and clouds, the lower slopes of the blue-green mountains and the foot of the waterfall fading into mist. Keep the exact same Chinese ink and blue-green shan shui painting style, paper colour and texture, so the repainted areas are invisible. Keep everything outside the masked areas exactly unchanged. No seal stamps, no text, no border.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-final-still.jpg"
+      ],
+      "input": {
+        "mask_url": "file:refs/dragon-mask-front.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    }
+  ]
+}

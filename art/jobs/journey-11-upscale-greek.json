@@ -1,0 +1,31 @@
+{
+  "scene": "journey",
+  "note": "Upscale the painted Greek parts (greek-b1-5, greek-b2-5).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "up-greek-b1",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/greek-b1.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.27
+    },
+    {
+      "label": "up-greek-b2",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/greek-b2.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.27
+    }
+  ]
+}

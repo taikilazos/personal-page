@@ -1,0 +1,46 @@
+{
+  "scene": "editions",
+  "note": "Fusion: seamless loops for three 1280x720 windows of fusion-3 (pegasus y0, dragon y960, kitsune y2560), laid over the still.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "loop-pegasus",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. The painting gently comes alive; keep exactly the same art style, colours, brushwork and paper or canvas texture in every frame, never 3D, never photographic. The top and bottom edges of the picture stay still. A seamless loop. A heroic oil painting: Pegasus holds its pose high in the sky, its great white wings rising and falling slowly and gently like breathing, the feather tips stirring, its mane and tail streaming strongly in the wind. The sunlight glimmers and the clouds below churn and drift slowly. Majestic and slow.",
+      "input": {
+        "image_url": "file:refs/fusion-pegasus.jpg",
+        "end_image_url": "file:refs/fusion-pegasus.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.69
+    },
+    {
+      "label": "loop-dragon",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. The painting gently comes alive; keep exactly the same art style, colours, brushwork and paper or canvas texture in every frame, never 3D, never photographic. The top and bottom edges of the picture stay still. A seamless loop. A Chinese ink and blue-green landscape painting: the ink dragon slowly undulates its coils through the clouds and gently turns its head, its whiskers drifting. Soft mist flows slowly between the mountain peaks. The waterfall flows. The mountains stay still. Serene and slow.",
+      "input": {
+        "image_url": "file:refs/fusion-dragon.jpg",
+        "end_image_url": "file:refs/fusion-dragon.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.69
+    },
+    {
+      "label": "loop-kitsune",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. The painting gently comes alive; keep exactly the same art style, colours, brushwork and paper or canvas texture in every frame, never 3D, never photographic. The top and bottom edges of the picture stay still. A seamless loop. A Japanese woodblock print: fine white rain lines fall steadily. The warm lantern lights flicker softly and their reflections ripple on the wet stone steps. Thin mist drifts slowly through the dark cedars and thin clouds pass slowly across the moon. The torii gates, the steps and the stone fox stay perfectly still. Quiet and slow.",
+      "input": {
+        "image_url": "file:refs/fusion-kitsune.jpg",
+        "end_image_url": "file:refs/fusion-kitsune.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.69
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scene": "journey",
+  "note": "Upscale round-3 parts: b1-41, b2a-41, first 42 frames of b2b-41 (cut before the model draws its own horse).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "up-r3-b1",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/r3-b1.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.26
+    },
+    {
+      "label": "up-r3-b2a",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/r3-b2a.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.26
+    },
+    {
+      "label": "up-r3-b2b",
+      "endpoint": "fal-ai/seedvr/upscale/video",
+      "input": {
+        "video_url": "upload:refs/upscale-in/r3-b2b.mp4",
+        "upscale_mode": "target",
+        "target_resolution": "1080p",
+        "output_quality": "maximum",
+        "seed": 7
+      },
+      "est_cost_usd": 0.09
+    }
+  ]
+}

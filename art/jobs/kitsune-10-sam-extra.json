@@ -1,0 +1,64 @@
+{
+  "scene": "kitsune",
+  "note": "Extra depth pieces for the near-mid layer.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "cedar",
+      "prompt": "tall cedar tree trunk",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 770,
+            "y_min": 0,
+            "x_max": 940,
+            "y_max": 960
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "bushes",
+      "prompt": "foreground bushes and mossy rocks",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 470,
+            "y_min": 800,
+            "x_max": 1060,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "leaves-tr",
+      "prompt": "tree leaves",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1790,
+            "y_min": 0,
+            "x_max": 1920,
+            "y_max": 380
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.005
+    }
+  ]
+}

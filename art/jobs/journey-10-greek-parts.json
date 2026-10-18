@@ -1,0 +1,63 @@
+{
+  "scene": "journey",
+  "note": "Silk Road part B redone through a painted Greek-coast checkpoint: ink dunes -> painted coast (B1), coast -> Pegasus (B2). 2 seeds each.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "greek-b1-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly transformation, slow, painting to painting; every frame is a painting with visible brushwork, never a photograph, never 3D. The soft ink dragon dissolves into a long serpentine ribbon of golden mist that streams after the small golden pearl, and the pearl swells into a blazing sun of painted golden rays. The ink dunes on the paper slowly turn into the deep blue Mediterranean sea, and the misty ink peaks become a rocky Greek headland with olive trees and a small white temple. The pale ink wash warms and thickens into rich oil paint with confident brushstrokes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/greek-keyframe.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "greek-b1-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly transformation, slow, painting to painting; every frame is a painting with visible brushwork, never a photograph, never 3D. The soft ink dragon dissolves into a long serpentine ribbon of golden mist that streams after the small golden pearl, and the pearl swells into a blazing sun of painted golden rays. The ink dunes on the paper slowly turn into the deep blue Mediterranean sea, and the misty ink peaks become a rocky Greek headland with olive trees and a small white temple. The pale ink wash warms and thickens into rich oil paint with confident brushstrokes.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/silk-keyframe.jpg",
+        "end_image_url": "file:refs/greek-keyframe.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "greek-b2-5",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly journey, a heroic oil painting with visible brushstrokes in every frame, never a photograph, never 3D. The camera rises from the Greek coast up into the sky; the golden ribbon of mist curls upward and gathers into sunlit white clouds, the sea and the temple sink away below, the sky deepens into rich cobalt blue. Out of the clouds a powerful white winged horse, Pegasus, rears up with its great wings spread.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/greek-keyframe.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 5
+      },
+      "est_cost_usd": 0.55
+    },
+    {
+      "label": "greek-b2-41",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous painterly journey, a heroic oil painting with visible brushstrokes in every frame, never a photograph, never 3D. The camera rises from the Greek coast up into the sky; the golden ribbon of mist curls upward and gathers into sunlit white clouds, the sea and the temple sink away below, the sky deepens into rich cobalt blue. Out of the clouds a powerful white winged horse, Pegasus, rears up with its great wings spread.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 5,
+        "image_url": "file:refs/greek-keyframe.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 41
+      },
+      "est_cost_usd": 0.55
+    }
+  ]
+}

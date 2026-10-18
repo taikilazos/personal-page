@@ -1,0 +1,115 @@
+{
+  "scene": "pegasus",
+  "note": "Round 2: Matania-style heroic illustration oil (user ref, private style guide only). Each scene once free, once with Bellerophon.",
+  "prompt": "The attached image is a painting of Pegasus in the style of Fortunino Matania. Use it only as the guide for the art style: a deep saturated teal and cobalt blue sky, strong hard sunlight with clear shadows, solid, realistic and powerfully muscular anatomy, crisp confident oil brushwork, solid sculpted white clouds, heroic early 20th-century illustration oil painting. Do not copy its exact composition. Make a heroic oil painting in that style. Pegasus is a white horse with a heavy, muscular, anatomically believable body, flowing white mane and tail, and very large white feathered wings with clearly painted feathers. Dramatic and powerful, never cute. Avoid pastel pink, avoid golden haze and soft glow, avoid sugary fluffy clouds, no cracked canvas texture. Wide horizontal composition. The subject sits on the right; the left third is calm deep blue sky with a few clouds, kept free for text. No text, no signature, no watermark, no border. Not a digital painting, no 3D render, no photograph.",
+  "runs": [
+    {
+      "label": "a-rearing-free",
+      "prompt": "Scene: Pegasus rears up high in the open sky, front hooves striking the air, wings spread wide and raised, head thrown up, above a bank of white clouds. Pegasus is free: no rider, no saddle, no bridle, no reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    },
+    {
+      "label": "a-rearing-rider",
+      "prompt": "Scene: Pegasus rears up high in the open sky, front hooves striking the air, wings spread wide and raised, head thrown up, above a bank of white clouds. Pegasus is ridden by the Greek hero Bellerophon in bronze armour with a red cloak and a spear, holding golden reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    },
+    {
+      "label": "b-sea-free",
+      "prompt": "Scene: Pegasus surges up out of a dark blue sea, spray and water streaming from its hooves and wings, climbing steeply into the deep blue sky. Pegasus is free: no rider, no saddle, no bridle, no reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    },
+    {
+      "label": "b-sea-rider",
+      "prompt": "Scene: Pegasus surges up out of a dark blue sea, spray and water streaming from its hooves and wings, climbing steeply into the deep blue sky. Pegasus is ridden by the Greek hero Bellerophon in bronze armour with a red cloak and a spear, holding golden reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    },
+    {
+      "label": "c-storm-free",
+      "prompt": "Scene: Pegasus bursts upward out of a mass of dark grey storm clouds below into clear deep blue sky and sunlight above, wings beating down, mane streaming. Pegasus is free: no rider, no saddle, no bridle, no reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    },
+    {
+      "label": "c-storm-rider",
+      "prompt": "Scene: Pegasus bursts upward out of a mass of dark grey storm clouds below into clear deep blue sky and sunlight above, wings beating down, mane streaming. Pegasus is ridden by the Greek hero Bellerophon in bronze armour with a red cloak and a spear, holding golden reins.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/matania-pegasus.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 1,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.06
+    }
+  ]
+}

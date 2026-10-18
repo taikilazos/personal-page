@@ -1,0 +1,19 @@
+{
+  "scene": "kitsune",
+  "note": "First video test. Seamless loop (same first and last frame), still camera, for a scroll website background; scroll adds zoom/fades in CSS.",
+  "prompt": "A completely still camera on a tripod: no camera movement, no zoom, no pan, no shake. This is a Japanese shin-hanga woodblock print brought gently to life; keep the flat printed woodblock look, the colours, the carved keylines and the paper texture in every frame. A light drizzle falls as fine white lines across the whole picture. The small warm golden fox-fire orbs float slowly up the stone steps toward the far end of the torii tunnel, softly flickering. The warm light in the stone lanterns breathes gently. Thin mist drifts slowly between the dark cedars on the left. Thin clouds pass slowly across the full moon. Faint ripples move through the red and gold reflections on the wet steps. The torii gates, the stone fox statues, the lanterns and the steps stay perfectly still. Calm, quiet and slow, as a seamless loop. No people, no animals moving, no text.",
+  "runs": [
+    {
+      "label": "h3max-loop-6s",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/kitsune-final-still.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.66
+    }
+  ]
+}

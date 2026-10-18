@@ -1,0 +1,67 @@
+{
+  "scene": "dragon",
+  "note": "Round 3: back to the round-1 blue-green shan shui look the user liked; dragon painted with the same loose brush as the landscape (Chen Rong refs) instead of a realistic fantasy dragon.",
+  "prompt": "The first attached image shows exactly the landscape style, colours, paper and layout we want: a Chinese shan shui painting in ink and mineral blue-green (qinglu) on pale aged rice paper. The other attached images are details of Chen Rong's Nine Dragons scroll; use them only as a guide for how the dragon is painted. Do not copy any of their exact scenes. Make an authentic Chinese shan shui landscape painting in ink and blue-green colour on pale aged rice paper, photographed as a museum scroll. Expressive grey and black ink brushwork with dry-brush texture strokes on the rocks, soft washes of malachite green and azurite blue on the mountains, vast drifting mist and large areas of empty paper. The dragon must be painted in exactly the same manner as the mountains, by the same brush: loose ink outlines, simple flat washes of the same grey and pale blue-green, very few details, scales only hinted at with a few strokes, partly transparent and fading into the mist so parts of its body disappear. It should look like ink on paper, as flat as the rest of the painting. Not realistic: no 3D shading, no detailed scales, no sharp highlights, no glossy eyes, not a fantasy illustration. Wide horizontal composition. The left third is calm, empty misty paper, kept free for text. No seal stamps, no written characters, no calligraphy, no text, no signature, no border. Not a digital painting, no photorealism.",
+  "runs": [
+    {
+      "label": "a-mountains",
+      "prompt": "Scene: a long dragon coils through drifting clouds between tall blue-green peaks, half hidden in the mist so only parts of its body show. A pagoda stands on a cliff on the right. Branches of red plum blossom in the foreground, a few small birds in the sky, a tiny boat on still water far below. Majestic and calm.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-favourite-mountains.jpg",
+        "refs/chenrong/part-3.jpg",
+        "refs/chenrong/part-9.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    },
+    {
+      "label": "b-storm",
+      "prompt": "Scene: grey ink storm clouds and slanting rain sweep across blue-green peaks. A dragon climbs upward through the storm on the right, its body twisting in and out of the cloud, toward a pale pearl of light breaking through above.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-favourite-mountains.jpg",
+        "refs/chenrong/part-3.jpg",
+        "refs/chenrong/part-9.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    },
+    {
+      "label": "c-dragon-gate",
+      "prompt": "Scene: the Dragon Gate legend. A waterfall pours between two blue-green cliffs on the right. At its foot, a small golden-red carp leaps up the falls. Above the top of the falls, a dragon is forming out of the mist and spray, its body still half cloud. Pine trees cling to the cliffs, mist fills the valley.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-favourite-mountains.jpg",
+        "refs/chenrong/part-3.jpg",
+        "refs/chenrong/part-9.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    }
+  ]
+}

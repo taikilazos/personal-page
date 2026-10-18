@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <meta name="description" content="{{description}}">
+    <meta name="theme-color" content="#1a2236">
     <link rel="stylesheet" href="{{base}}styles.css">
     <link rel="stylesheet" href="{{base}}assets/fonts/fonts.css">
-    <link rel="preload" as="font" type="font/woff2" href="{{base}}assets/fonts/inter-latin.woff2" crossorigin>
-    <script>document.documentElement.classList.add('js-reveal');</script>
+    <link rel="preload" as="font" type="font/woff2" href="{{base}}assets/fonts/shippori-mincho-500.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{base}}assets/fonts/zen-kaku-gothic-400.woff2" crossorigin>
     {{extra_head}}
 </head>
-<body>
+<body class="{{body_class}}">
     <header class="header">
-        <nav class="nav">
+        <a class="masthead" href="{{base}}index.html">Taiki Papandreou</a>
+        <nav class="nav" aria-label="Main">
             <ul class="nav-menu">
 {{nav}}
             </ul>

@@ -1,0 +1,21 @@
+{
+  "scene": "kitsune",
+  "note": "Round 2, version A: same prompt as kitsune-02 but text only, no reference prints.",
+  "prompt": "An authentic Japanese shin-hanga woodblock print by Kawase Hasui, about 1930, as a scanned museum print. Rainy evening at an Inari fox shrine. A vermilion two-storey shrine gate, seen straight on from the front, stands right of centre, its doors facing the viewer, with bronze lanterns under the eaves, one softly lit. Two white kitsune fox guardians with red cloth bibs sit on stone pedestals on either side of the gate steps, facing forward and looking straight at the viewer. A wet stone path leads to the gate, reflecting the red pillars. Tall dark cedars behind, a pine branch over the top. Long fine white rain lines. Limited palette of about six printed colours: grey-teal sky, vermilion, dark pine green, stone grey, ivory, warm lamp yellow. Flat colour with soft bokashi gradients, crisp carved keylines, woodgrain in the sky, washi paper fibres, slight colour misregistration, matte ink. Calm composition with large quiet areas. The left third is open misty sky for text. Not a digital painting, no 3D, no photorealism, no glow effects. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "sunburst-text",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 4,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.16
+    }
+  ]
+}

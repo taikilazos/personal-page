@@ -1,0 +1,82 @@
+{
+  "scene": "editions",
+  "note": "Surprise round: one continuous painting per concept (tall 'Ascent' scroll, wide 'Screen' panorama), from scratch. Self-imposed cap $8.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "ascent-woodblock",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "prompt": "An authentic Japanese shin-hanga woodblock print in the manner of Kawase Hasui and Tsuchiya Koitsu, a tall kakemono-format print, scanned museum print: flat colour with soft bokashi gradients, crisp carved keylines, woodgrain, washi paper texture, fine white rain lines. A very tall vertical composition read from bottom to top as one continuous journey, the light growing from deep night at the bottom to bright day at the top. Bottom: a rainy night at an Inari fox shrine, a tunnel of vermilion torii gates climbing stone steps into a cedar forest, a white stone fox guardian with a red bib watching beside the path, warm lanterns. Middle: the path and the mist rise into towering blue-green mountain peaks at dawn, and a long dragon coils upward through the clouds between them. Top: the clouds open into a vast bright sky where a white winged horse soars upward, wings spread, still rising. Each part flows into the next through mist and cloud, no borders between them. The left side of the whole picture stays calmer and emptier. No text, no signature, no seal stamps, no border.",
+      "input": {
+        "image_size": {
+          "width": 1280,
+          "height": 3840
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.16
+    },
+    {
+      "label": "ascent-ink",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "prompt": "An authentic Chinese hanging scroll painting in ink and mineral blue-green colour (qinglu shan shui) on aged silk, museum photograph: expressive ink brushwork, malachite and azurite washes, vast drifting mist and empty silk. The dragon and the heavenly horse (tianma) are painted with the same loose brush as the mountains, never realistic. A very tall vertical composition read from bottom to top as one continuous journey, the light growing from deep night at the bottom to bright day at the top. Bottom: a rainy night at an Inari fox shrine, a tunnel of vermilion torii gates climbing stone steps into a cedar forest, a white stone fox guardian with a red bib watching beside the path, warm lanterns. Middle: the path and the mist rise into towering blue-green mountain peaks at dawn, and a long dragon coils upward through the clouds between them. Top: the clouds open into a vast bright sky where a white winged horse soars upward, wings spread, still rising. Each part flows into the next through mist and cloud, no borders between them. The left side of the whole picture stays calmer and emptier. No text, no signature, no seal stamps, no border.",
+      "input": {
+        "image_size": {
+          "width": 1280,
+          "height": 3840
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.16
+    },
+    {
+      "label": "ascent-gold",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "prompt": "A Japanese Rinpa school painting in the manner of Tawaraya Sotatsu and Ogata Korin on a tall panel of gold leaf, museum photograph: flat bold shapes of mineral pigment (malachite green, azurite blue, vermilion, white) on shimmering gold leaf, stylised swirling clouds and mist outlined in ink, elegant and decorative, visible gold leaf squares and age. A very tall vertical composition read from bottom to top as one continuous journey, the light growing from deep night at the bottom to bright day at the top. Bottom: a rainy night at an Inari fox shrine, a tunnel of vermilion torii gates climbing stone steps into a cedar forest, a white stone fox guardian with a red bib watching beside the path, warm lanterns. Middle: the path and the mist rise into towering blue-green mountain peaks at dawn, and a long dragon coils upward through the clouds between them. Top: the clouds open into a vast bright sky where a white winged horse soars upward, wings spread, still rising. Each part flows into the next through mist and cloud, no borders between them. The left side of the whole picture stays calmer and emptier. No text, no signature, no seal stamps, no border.",
+      "input": {
+        "image_size": {
+          "width": 1280,
+          "height": 3840
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.16
+    },
+    {
+      "label": "screen-gold",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "prompt": "A Japanese six-panel folding screen (byobu) painting in the Rinpa style of Sotatsu and Korin on gold leaf, photographed flat in a museum: bold flat shapes of mineral pigment on shimmering gold leaf, stylised swirling clouds outlined in ink, faint vertical seams between the panels. A very wide horizontal panorama read from left to right as one continuous journey, from night on the left to bright day on the right. Left: a rainy night Inari fox shrine with vermilion torii gates and a white fox guardian with a red bib. Centre: mist rising into dramatic mountain peaks where a long dragon coils through storm clouds. Right: the clouds open into a bright sky where a white winged horse rears and soars upward. The three parts flow into each other through cloud and mist. No text, no signature, no seal stamps, no border.",
+      "input": {
+        "image_size": {
+          "width": 3840,
+          "height": 1280
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.2
+    },
+    {
+      "label": "screen-kuniyoshi",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "prompt": "A dramatic Japanese ukiyo-e woodblock triptych in the manner of Utagawa Kuniyoshi, three sheets side by side, scanned museum print: bold keylines, dynamic composition, rich Prussian blue, vermilion and black, patterned waves and clouds, aged paper, faint seams between the three sheets. A very wide horizontal panorama read from left to right as one continuous journey, from night on the left to bright day on the right. Left: a rainy night Inari fox shrine with vermilion torii gates and a white fox guardian with a red bib. Centre: mist rising into dramatic mountain peaks where a long dragon coils through storm clouds. Right: the clouds open into a bright sky where a white winged horse rears and soars upward. The three parts flow into each other through cloud and mist. No text, no signature, no seal stamps, no border.",
+      "input": {
+        "image_size": {
+          "width": 3840,
+          "height": 1280
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.2
+    }
+  ]
+}

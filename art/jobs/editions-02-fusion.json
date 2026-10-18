@@ -1,0 +1,27 @@
+{
+  "scene": "editions",
+  "note": "Fusion: one tall climb where the art style changes with the story (woodblock -> ink -> oil), guided by the three chosen stills and the ascent layout.",
+  "prompt": "The attached images are guides. Image 1 is a Japanese shin-hanga woodblock print, image 2 a Chinese ink and blue-green shan shui scroll, image 3 a heroic early 20th-century oil painting. Image 4 shows only the tall layout: a climb from a night shrine at the bottom to a bright sky at the top. Make one very tall vertical painting, read from the bottom to the top as one continuous climb from night to day, in which the art style itself changes gradually as you climb. Bottom third, painted exactly in the style of image 1 (flat woodblock colour, carved keylines, bokashi, fine white rain lines, washi texture): a rainy night at an Inari fox shrine, a tunnel of vermilion torii climbing wet stone steps into dark cedars, warm lanterns, a white stone fox guardian with a red bib sitting at the right side, a full moon in the mist. Middle third, painted exactly in the style of image 2 (loose ink brushwork and malachite and azurite washes on pale rice paper): the path disappears into mist, and blue-green mountain peaks rise out of the clouds at dawn while a long ink dragon, painted with the same loose brush, coils upward between them. Top third, painted exactly in the style of image 3 (rich oil paint, deep cobalt sky, hard sunlight, sculpted white cumulus): the clouds open into a bright sky where a powerful white winged horse rears upward, wings spread wide, still rising. The transitions are seamless and gradual: the woodblock rain mist softens into ink-wash mist, and the ink clouds thicken and take on light and volume until they become oil-painted cumulus. No hard borders, no panels, no frames between the parts. The left side of the whole picture stays calmer and emptier. No text, no signature, no seal stamps, no border.",
+  "runs": [
+    {
+      "label": "fusion",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg",
+        "refs/dragon-final-still.jpg",
+        "refs/pegasus-final-still-png.jpg",
+        "refs/ascent-layout.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1280,
+          "height": 3840
+        },
+        "quality": "high",
+        "num_images": 3,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.36
+    }
+  ]
+}

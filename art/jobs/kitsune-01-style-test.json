@@ -1,0 +1,19 @@
+{
+  "scene": "kitsune",
+  "note": "First style test: same prompt on the two top-ranked image models (Oct 2026).",
+  "prompt": "Shin-hanga Japanese woodblock print in the style of Kawase Hasui, 1930s. An Inari shrine on a rainy evening. On the right, a vermilion shrine gate hall with hanging bronze lanterns, two softly lit. Center-right, a white kitsune fox with nine tails and a red votive bib sits on a stone pedestal, calm and watchful. A stone lantern, tall cedars fading into mist, a pine branch hanging over the top. Long thin white rain lines. Wet flagstones reflecting the red gate and the fox. Grey-teal sky with soft bokashi gradient, flat colour areas, fine dark keylines, woodgrain and washi paper texture. Quiet and sacred. The left third is open misty sky, kept empty for text. No text, no signature, no border.",
+  "runs": [
+    {
+      "label": "gpt-sunburst",
+      "endpoint": "openai/gpt-image-2.5/sunburst/text-to-image",
+      "input": { "image_size": { "width": 1920, "height": 1080 }, "quality": "high", "num_images": 4, "output_format": "png" },
+      "est_cost_usd": 0.16
+    },
+    {
+      "label": "nano-2.1",
+      "endpoint": "fal-ai/nano-banana-2.1",
+      "input": { "aspect_ratio": "16:9", "resolution": "2K", "num_images": 4, "output_format": "png" },
+      "est_cost_usd": 0.48
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "scene": "kitsune",
+  "note": "Layers: animate only the clean tunnel plate (front pieces are separate layers now). Seamless loop.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "mid-loop",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. A Japanese shin-hanga woodblock print gently comes alive; keep the flat printed look, colours, carved keylines and paper texture in every frame. A fine light drizzle falls everywhere. Five small round warm golden glowing orbs drift slowly upward along the stone steps into the torii tunnel; they stay small round orbs at all times and never become flames. The lantern lights flicker very softly. Thin clouds pass very slowly across the moon, and thin mist drifts low through the forest on the left. Gentle ripples move through the red and gold reflections on the wet steps. The torii gates, the fox statues, the lanterns, the trees and the steps do not move. Quiet, slow, a seamless loop.",
+      "input": {
+        "image_url": "file:refs/kitsune-midplate.jpg",
+        "end_image_url": "file:refs/kitsune-midplate.jpg",
+        "duration": 6,
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled"
+      },
+      "est_cost_usd": 0.69
+    }
+  ]
+}

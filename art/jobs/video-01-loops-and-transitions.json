@@ -1,0 +1,72 @@
+{
+  "scene": "video",
+  "note": "Videos for the scroll site: seamless 6s loops per scene (same first/last frame, still camera, calm text side) and two scroll-driven transition clips between scenes. User gave free rein; self-imposed cap $10.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "loop-kitsune",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. A Japanese shin-hanga woodblock print gently comes alive; keep the flat printed look, colours, carved keylines and paper texture in every frame. A fine light drizzle falls everywhere. Five small round warm golden glowing orbs drift slowly upward along the stone steps into the torii tunnel; they stay small round orbs at all times and never become flames. The lantern lights flicker very softly. The forest and mist on the left stay calm and almost still, with only the faintest drift. Thin clouds pass very slowly across the moon. Gentle ripples move through the red and gold reflections on the wet steps. The torii, the fox statues, the lanterns, the trees and the steps do not move. Quiet, slow, a seamless loop.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/kitsune-final-still.jpg",
+        "duration": 6
+      },
+      "est_cost_usd": 0.69,
+      "endpoint": "minimax/h3-max/image-to-video"
+    },
+    {
+      "label": "loop-dragon",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. A Chinese ink and blue-green landscape painting on rice paper gently comes alive; keep the painted brushwork look in every frame, the dragon stays a flat ink brush painting, never 3D. The ink dragon slowly undulates its coils through the clouds and gently turns its head. Soft mist flows slowly around the mountain peaks and through the dragon's body. The waterfall flows. The red plum blossom branches sway slightly and a few petals drift down. The lake ripples very gently; the small boat stays where it is. The birds glide slowly. The empty paper sky on the left stays calm. Serene and slow, a seamless loop.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/dragon-final-still.jpg",
+        "duration": 6
+      },
+      "est_cost_usd": 0.69,
+      "endpoint": "minimax/h3-max/image-to-video"
+    },
+    {
+      "label": "loop-pegasus",
+      "prompt": "A locked-off static camera: no camera movement, no zoom, no pan. A heroic oil painting gently comes alive; keep the visible oil brushstrokes in every frame. Pegasus hovers in place high in the sky and beats its great white wings slowly and powerfully, its mane and tail streaming in the wind, its front hooves pawing the air. The white clouds below churn and drift slowly. The deep blue sky on the left stays calm. Majestic and slow, a seamless loop.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "image_url": "file:refs/pegasus-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "duration": 6
+      },
+      "est_cost_usd": 0.69,
+      "endpoint": "minimax/h3-max/image-to-video"
+    },
+    {
+      "label": "trans-kitsune-to-dragon",
+      "prompt": "One continuous magical transformation. The camera glides slowly forward up the steps into the glowing torii tunnel while soft white mist pours in and fills everything. As the mist thins, the dark woodblock print has turned into a pale Chinese ink painting on rice paper: blue-green mountains rise out of the clouds and an ink dragon uncoils between the peaks, with plum blossoms, a pagoda and a small boat on a still lake. Painterly throughout, no 3D, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/dragon-final-still.jpg",
+        "duration": 5
+      },
+      "est_cost_usd": 0.6,
+      "endpoint": "minimax/h3-max/image-to-video"
+    },
+    {
+      "label": "trans-dragon-to-pegasus",
+      "prompt": "One continuous magical transformation. The ink dragon rises up into the clouds and vanishes into them; the pale paper sky deepens into a rich cobalt blue sky, the ink mist turns into bright sculpted white oil-painted clouds lit by strong sunlight, and out of the clouds a powerful white winged horse, Pegasus, rears up with its great wings spread. The Chinese ink painting becomes a heroic oil painting. Painterly throughout, no 3D, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "duration": 5
+      },
+      "est_cost_usd": 0.6,
+      "endpoint": "minimax/h3-max/image-to-video"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "scene": "kitsune",
+  "note": "Layers: cut the near pieces (front torii, fox statue wall, lantern) and the sky out of the chosen still with SAM 3, for parallax.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "torii-left",
+      "prompt": "red torii pillar",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1035,
+            "y_min": 0,
+            "x_max": 1225,
+            "y_max": 830
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "torii-right",
+      "prompt": "red torii pillar",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1610,
+            "y_min": 0,
+            "x_max": 1825,
+            "y_max": 730
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "torii-beam",
+      "prompt": "red wooden beam",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1020,
+            "y_min": 0,
+            "x_max": 1920,
+            "y_max": 70
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "fox-wall",
+      "prompt": "stone fox statue on stone pedestal and stone wall",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1575,
+            "y_min": 340,
+            "x_max": 1920,
+            "y_max": 1088
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "lantern",
+      "prompt": "stone lantern",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 920,
+            "y_min": 530,
+            "x_max": 1078,
+            "y_max": 875
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "pillar-base",
+      "prompt": "stone block base",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 1005,
+            "y_min": 790,
+            "x_max": 1245,
+            "y_max": 905
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    },
+    {
+      "label": "sky",
+      "prompt": "night sky with moon and clouds",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "box_prompts": [
+          {
+            "x_min": 0,
+            "y_min": 0,
+            "x_max": 760,
+            "y_max": 420
+          }
+        ],
+        "apply_mask": false,
+        "output_format": "png",
+        "include_scores": true
+      },
+      "est_cost_usd": 0.005
+    }
+  ]
+}

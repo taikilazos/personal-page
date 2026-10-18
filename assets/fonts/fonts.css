@@ -1,8 +1,51 @@
-/* Self-hosted Inter — latin subset, variable weight 300-800 */
+/* Self-hosted, latin subsets from Google Fonts (SIL Open Font License).
+   Shippori Mincho: headings, the mincho of Japanese book typography.
+   Zen Kaku Gothic New: body text, its gothic companion.
+   shippori-mincho-seals.woff2 holds only the few kanji and Greek letters the site uses. */
 @font-face {
-    font-family: 'Inter';
+    font-family: 'Shippori Mincho';
     font-style: normal;
-    font-weight: 300 800;
+    font-weight: 500;
     font-display: swap;
-    src: url('inter-latin.woff2') format('woff2');
+    src: url('shippori-mincho-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Shippori Mincho';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('shippori-mincho-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Shippori Mincho Seals';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src: url('shippori-mincho-seals.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('zen-kaku-gothic-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('zen-kaku-gothic-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('zen-kaku-gothic-700.woff2') format('woff2');
 }

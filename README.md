@@ -35,11 +35,26 @@ I build AI-powered solutions that solve real-world problems — from chatbots to
 The site is assembled by a zero-dependency build script — no framework, no node_modules:
 
 ```
-python3 build.py
+python3 build.py      # build every page from _pages/ into the repo root
+python3 serve.py      # preview at http://127.0.0.1:8000/
 ```
 
 - Page content lives in `_pages/` (front matter + body HTML per page)
-- Shared markup lives in `_templates/` (`head.html`, `footer.html`)
+- Shared markup lives in `_templates/` (`head.html`, `footer.html`); new pages start from
+  `_templates/new-project.html` or `_templates/new-post.html`, copied into `_pages/projects/` or `_pages/blog/`
 - The nav is defined once in `build.py` — change it there, rebuild, all pages update
 - Outputs are written to the repo root and committed, so GitHub Pages serves them as-is
-- Fonts are self-hosted (`assets/fonts/`, latin subset of Inter), images are resized JPEGs
+- Fonts are self-hosted (`assets/fonts/`): Shippori Mincho for headings, Zen Kaku Gothic New for text
+- Preview with `serve.py`, not `python3 -m http.server`: the homepage film is scrubbed by the scroll,
+  which needs HTTP Range requests (GitHub Pages supports them, the built-in server does not)
+
+## 🎨 The homepage artwork
+
+The homepage is one journey west along the Silk Road, from Japan through China to Greece:
+a kitsune shrine, a dragon over ink mountains, and Pegasus. `myth.js` plays each scene as a loop
+while you read and scrubs the journeys between them with the scroll.
+
+- Site files: `assets/myth-film/` (scene loops, the journeys film, posters)
+- How they were made: `art/` — `gen.py` runs a job file from `art/jobs/` on fal.ai and logs its
+  cost in `art/ledger.csv`; `review.py` checks a video's loop seam and motion; `picks.md` records
+  which drafts were chosen. Drafts and reference images stay local (`art/out/`, `art/refs/` are ignored).

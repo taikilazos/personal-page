@@ -7,7 +7,8 @@ ready for GitHub Pages.
 
 Front matter (between --- lines) supports:
     title        <title> text
-    nav          home | projects | blog  (which nav link is active)
+    nav          projects | blog  (which nav link is marked current)
+    body_class   optional class on <body> (the homepage uses it to float the header over the film)
     description  optional per-page meta description
     extra_head   folded block (key: |) of extra <head> content
     footer_extra folded block of extra footer content
@@ -28,9 +29,9 @@ DEFAULT_DESCRIPTION = (
 )
 
 NAV_ITEMS = [
-    ("home", "Home", "index.html"),
     ("projects", "Projects", "projects.html"),
     ("blog", "Blog", "blog.html"),
+    ("cv", "CV", "assets/Taiki_CV.pdf"),
 ]
 
 
@@ -60,9 +61,9 @@ def parse_source(text):
 def render_nav(active, base):
     items = []
     for key, label, href in NAV_ITEMS:
-        cls = "nav-link active" if key == active else "nav-link"
+        current = ' aria-current="page"' if key == active else ""
         items.append(
-            f'                <li><a href="{base}{href}" class="{cls}">{label}</a></li>'
+            f'                <li><a href="{base}{href}" class="nav-link"{current}>{label}</a></li>'
         )
     return "\n".join(items)
 
@@ -80,6 +81,7 @@ def render(source):
     )
     head = head.replace("{{extra_head}}", fm.get("extra_head", ""))
     head = head.replace("{{nav}}", render_nav(fm.get("nav", ""), base))
+    head = head.replace("{{body_class}}", fm.get("body_class", ""))
 
     foot = (TEMPLATES / "footer.html").read_text()
     foot = foot.replace("{{base}}", base)

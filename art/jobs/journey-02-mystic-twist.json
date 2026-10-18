@@ -1,0 +1,63 @@
+{
+  "scene": "journey",
+  "note": "Round 2 journeys: mystical fox-led passage that paints the ink world into being; dragon whirlwind bursting into feathers that become Pegasus. 2 seeds each.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "k2d-mystic-1",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous, mystical camera journey, slow and dreamlike, painterly in every frame. The small golden fox-fire orbs gather into a line and drift up the wet stone steps, leading the way. A white spirit fox with nine flowing tails appears on the steps ahead and runs up through the tunnel of vermilion torii gates, its tails trailing soft golden light, and the camera follows it, the gates passing on both sides. At the end of the tunnel the fox leaps into a glowing white light. Its trail of light turns into flowing strokes of black ink, and the ink strokes paint the scene into being on pale rice paper: misty blue-green mountains, a long ink dragon coiling between the peaks, a pagoda, red plum blossom, a small boat on a still lake. The Japanese woodblock print gradually becomes a Chinese ink painting. No 3D, no photorealism, no people.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/dragon-final-still.jpg",
+        "seed": 11
+      },
+      "est_cost_usd": 1.1
+    },
+    {
+      "label": "k2d-mystic-2",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous, mystical camera journey, slow and dreamlike, painterly in every frame. The small golden fox-fire orbs gather into a line and drift up the wet stone steps, leading the way. A white spirit fox with nine flowing tails appears on the steps ahead and runs up through the tunnel of vermilion torii gates, its tails trailing soft golden light, and the camera follows it, the gates passing on both sides. At the end of the tunnel the fox leaps into a glowing white light. Its trail of light turns into flowing strokes of black ink, and the ink strokes paint the scene into being on pale rice paper: misty blue-green mountains, a long ink dragon coiling between the peaks, a pagoda, red plum blossom, a small boat on a still lake. The Japanese woodblock print gradually becomes a Chinese ink painting. No 3D, no photorealism, no people.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/kitsune-final-still.jpg",
+        "end_image_url": "file:refs/dragon-final-still.jpg",
+        "seed": 29
+      },
+      "est_cost_usd": 1.1
+    },
+    {
+      "label": "d2p-twist-1",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous camera journey with a magical transformation, painterly in every frame. The ink dragon lifts its head and spirals upward through the clouds; the mountains sink away below. The dragon coils tighter and tighter into a whirling vortex of cloud and mist. A bright flash of light inside the whirlwind. The vortex bursts open and the dragon's scales scatter into thousands of white feathers that swirl together, and the feathers form great white wings: a powerful white winged horse, Pegasus, is born out of the storm and rears up in a deep cobalt blue sky above sunlit white clouds, wings spread wide. The pale ink painting turns into a rich heroic oil painting as it happens. No 3D, no cartoon, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 11
+      },
+      "est_cost_usd": 1.1
+    },
+    {
+      "label": "d2p-twist-2",
+      "endpoint": "minimax/h3-max/image-to-video",
+      "prompt": "One continuous camera journey with a magical transformation, painterly in every frame. The ink dragon lifts its head and spirals upward through the clouds; the mountains sink away below. The dragon coils tighter and tighter into a whirling vortex of cloud and mist. A bright flash of light inside the whirlwind. The vortex bursts open and the dragon's scales scatter into thousands of white feathers that swirl together, and the feathers form great white wings: a powerful white winged horse, Pegasus, is born out of the storm and rears up in a deep cobalt blue sky above sunlit white clouds, wings spread wide. The pale ink painting turns into a rich heroic oil painting as it happens. No 3D, no cartoon, no photorealism.",
+      "input": {
+        "resolution": "1080P",
+        "prompt_expansion_mode": "disabled",
+        "duration": 10,
+        "image_url": "file:refs/dragon-final-still.jpg",
+        "end_image_url": "file:refs/pegasus-final-still.jpg",
+        "seed": 29
+      },
+      "est_cost_usd": 1.1
+    }
+  ]
+}
