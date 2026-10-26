@@ -1,0 +1,74 @@
+{
+  "scene": "sprites",
+  "note": "Empty Pegasus sky plate, and 6 s green-screen loops for the fox (tails sway) and Pegasus (wing beat).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "pegasus-plate-empty",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/pegasus-final-still.jpg"
+      ],
+      "prompt": "Repaint only the masked (transparent) area: remove the winged horse completely and paint what lies behind it: the same deep cobalt blue sky and sunlit sculpted white cumulus clouds, in exactly the same heroic oil painting style and brushwork, so the repaint is invisible. Keep everything outside the mask exactly unchanged. No horse, no creatures, no birds, no text.",
+      "input": {
+        "mask_url": "file:refs/pegasus-mask-nohorse.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    },
+    {
+      "label": "fox-loop",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"Locked-off static camera, no camera movement, no zoom. A seamless 6-second loop.\",\n \"subject\": \"The white spirit fox with nine tails from the image, a Japanese woodblock print.\",\n \"motion\": \"The fox sits still and calm; its nine tails sway slowly and softly, each a little out of step with the others, like flames in a gentle breeze; its ears twitch once; it blinks slowly once. It ends exactly as it started.\",\n \"background\": \"Perfectly flat uniform pure chroma-key green, unchanged in every frame: no texture, no shading, no shadow, no light, no particles.\",\n \"keep\": [\n  \"exactly the same painting style, colours and line work as the image\",\n  \"the whole creature inside the frame, in the same place\"\n ],\n \"avoid\": [\n  \"3D look\",\n  \"glossy surfaces\",\n  \"anything appearing on the green\",\n  \"the creature moving across the frame\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/fox-green.png",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/fox-green.png",
+            "frame_index": 144
+          }
+        ],
+        "duration": 6,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 7
+      },
+      "est_cost_usd": 0.44
+    },
+    {
+      "label": "pegasus-loop",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"Locked-off static camera, no camera movement, no zoom. A seamless 6-second loop.\",\n \"subject\": \"The white winged horse Pegasus from the image, a heroic oil painting.\",\n \"motion\": \"Pegasus hovers in place: its great wings beat slowly and powerfully, one full down-and-up stroke, its mane and tail stream in the wind, its front hooves paw the air. It ends exactly as it started.\",\n \"background\": \"Perfectly flat uniform pure chroma-key green, unchanged in every frame: no texture, no shading, no shadow, no light, no particles.\",\n \"keep\": [\n  \"exactly the same painting style, colours and line work as the image\",\n  \"the whole creature inside the frame, in the same place\"\n ],\n \"avoid\": [\n  \"3D look\",\n  \"glossy surfaces\",\n  \"anything appearing on the green\",\n  \"the creature moving across the frame\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/pegasus-green.png",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/pegasus-green.png",
+            "frame_index": 144
+          }
+        ],
+        "duration": 6,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 7
+      },
+      "est_cost_usd": 0.44
+    }
+  ]
+}

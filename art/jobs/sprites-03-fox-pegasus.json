@@ -1,0 +1,56 @@
+{
+  "scene": "sprites",
+  "note": "Greenscreen sprites for fox and Pegasus, plus a mask of the horse to repaint an empty Pegasus sky.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "fox-green",
+      "prompt": "Image 1 is a Japanese shin-hanga woodblock print. Paint ONLY a white spirit fox (kitsune), alone, in exactly that woodblock style: flat ivory colour with fine carved keylines, a little soft bokashi shading, matte ink, no glow. The fox sits upright, seen from the side and slightly from behind, its head turned to look back over its shoulder toward the viewer, calm and watchful. Nine long fluffy tails fan out behind it in a graceful arc, their tips softly golden. The whole fox with all its tails is visible with margin around it, filling about half of the frame. The background is a perfectly flat, uniform, pure chroma-key green (#00FF00): no texture, no paper, no shading, no shadow, no ground, no rain, no light. The fox has no green in it. No text, no border.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png",
+        "background": "opaque"
+      },
+      "est_cost_usd": 0.12
+    },
+    {
+      "label": "pegasus-green",
+      "prompt": "Image 1 is a heroic early 20th-century oil painting of Pegasus. Paint ONLY that same white winged horse, alone, in exactly the same pose, style and brushwork as in image 1: rearing, great wings spread, mane and tail flowing. The whole horse with both wings and tail is visible with margin around it. The background is a perfectly flat, uniform, pure chroma-key green (#00FF00): no sky, no clouds, no texture, no shading, no shadow, no light rays. The horse has no green in it. No text, no border.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/pegasus-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png",
+        "background": "opaque"
+      },
+      "est_cost_usd": 0.12
+    },
+    {
+      "label": "pegasus-mask",
+      "endpoint": "fal-ai/sam-3/image",
+      "input": {
+        "image_url": "file:refs/pegasus-final-still.jpg",
+        "prompt": "white winged horse",
+        "apply_mask": false,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.005
+    }
+  ]
+}

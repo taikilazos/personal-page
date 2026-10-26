@@ -1,0 +1,79 @@
+{
+  "scene": "journey",
+  "note": "FLUX 3 Max keyframes-to-video: the whole dragon-to-Pegasus journey as ONE 20 s generation through the 5 painted checkpoints, JSON-structured prompt (no negative field, so 'avoid' is plain text and 'keep' says the positive).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "flux-d2p-7",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"One continuous 20-second camera journey travelling west, slow and smooth, through five paintings that are given as keyframes. Every frame is a hand-made painting.\",\n \"subject\": \"A soft grey ink dragon with a long serpentine body follows a small glowing golden pearl.\",\n \"timeline\": [\n  {\n   \"seconds\": \"0-5\",\n   \"motion\": \"The dragon lifts out of the blue-green ink mountains on rice paper and glides west after the pearl; the peaks sink away and ink-painted sand dunes with a camel caravan and a watchtower spread out below.\"\n  },\n  {\n   \"seconds\": \"5-10\",\n   \"motion\": \"The dragon and the pearl keep flying in the upper part of the frame; beneath them a slow wall of golden mist rolls across the land, and where it has passed the dunes have become the deep blue Mediterranean and a rocky Greek headland with olive trees and a white temple. The paper and ink warm into oil paint.\"\n  },\n  {\n   \"seconds\": \"10-15\",\n   \"motion\": \"The camera tilts slowly up with the dragon as it climbs in long undulating coils; the coast sinks out of frame and towering sunlit cumulus clouds rise; the dragon's head enters the clouds.\"\n  },\n  {\n   \"seconds\": \"15-20\",\n   \"motion\": \"The dragon's body slips into the clouds and is gone; the clouds drift apart like curtains and uncover the white winged horse already rearing in the cobalt sky. The horse does not form or change; it is uncovered.\"\n  }\n ],\n \"style\": \"Starts as a Chinese ink and blue-green shan shui painting on aged rice paper; ends as a heroic early 20th-century oil painting with confident visible brushstrokes, hard sunlight and sculpted clouds. The change of style happens through mist and cloud, never as a crossfade.\",\n \"keep\": [\n  \"the dragon matte, soft grey ink brushwork, scales only hinted, as in the keyframes\",\n  \"the same dragon design all the way\",\n  \"painted texture in every frame\",\n  \"one continuous landscape at a time\"\n ],\n \"avoid\": [\n  \"glossy or plastic surfaces\",\n  \"3D rendered look\",\n  \"photographic realism\",\n  \"cartoon faces\",\n  \"double exposure of two landscapes\",\n  \"text or watermarks\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/dragon-final-still.jpg",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/silk-keyframe.jpg",
+            "frame_index": 120
+          },
+          {
+            "image_url": "upload:refs/g1-coast-dragon.jpg",
+            "frame_index": 240
+          },
+          {
+            "image_url": "upload:refs/g2-cloud-wall.jpg",
+            "frame_index": 360
+          },
+          {
+            "image_url": "upload:refs/pegasus-final-still.jpg",
+            "frame_index": 480
+          }
+        ],
+        "duration": 20,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 7
+      },
+      "est_cost_usd": 1.45
+    },
+    {
+      "label": "flux-d2p-23",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"One continuous 20-second camera journey travelling west, slow and smooth, through five paintings that are given as keyframes. Every frame is a hand-made painting.\",\n \"subject\": \"A soft grey ink dragon with a long serpentine body follows a small glowing golden pearl.\",\n \"timeline\": [\n  {\n   \"seconds\": \"0-5\",\n   \"motion\": \"The dragon lifts out of the blue-green ink mountains on rice paper and glides west after the pearl; the peaks sink away and ink-painted sand dunes with a camel caravan and a watchtower spread out below.\"\n  },\n  {\n   \"seconds\": \"5-10\",\n   \"motion\": \"The dragon and the pearl keep flying in the upper part of the frame; beneath them a slow wall of golden mist rolls across the land, and where it has passed the dunes have become the deep blue Mediterranean and a rocky Greek headland with olive trees and a white temple. The paper and ink warm into oil paint.\"\n  },\n  {\n   \"seconds\": \"10-15\",\n   \"motion\": \"The camera tilts slowly up with the dragon as it climbs in long undulating coils; the coast sinks out of frame and towering sunlit cumulus clouds rise; the dragon's head enters the clouds.\"\n  },\n  {\n   \"seconds\": \"15-20\",\n   \"motion\": \"The dragon's body slips into the clouds and is gone; the clouds drift apart like curtains and uncover the white winged horse already rearing in the cobalt sky. The horse does not form or change; it is uncovered.\"\n  }\n ],\n \"style\": \"Starts as a Chinese ink and blue-green shan shui painting on aged rice paper; ends as a heroic early 20th-century oil painting with confident visible brushstrokes, hard sunlight and sculpted clouds. The change of style happens through mist and cloud, never as a crossfade.\",\n \"keep\": [\n  \"the dragon matte, soft grey ink brushwork, scales only hinted, as in the keyframes\",\n  \"the same dragon design all the way\",\n  \"painted texture in every frame\",\n  \"one continuous landscape at a time\"\n ],\n \"avoid\": [\n  \"glossy or plastic surfaces\",\n  \"3D rendered look\",\n  \"photographic realism\",\n  \"cartoon faces\",\n  \"double exposure of two landscapes\",\n  \"text or watermarks\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/dragon-final-still.jpg",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/silk-keyframe.jpg",
+            "frame_index": 120
+          },
+          {
+            "image_url": "upload:refs/g1-coast-dragon.jpg",
+            "frame_index": 240
+          },
+          {
+            "image_url": "upload:refs/g2-cloud-wall.jpg",
+            "frame_index": 360
+          },
+          {
+            "image_url": "upload:refs/pegasus-final-still.jpg",
+            "frame_index": 480
+          }
+        ],
+        "duration": 20,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 23
+      },
+      "est_cost_usd": 1.45
+    }
+  ]
+}

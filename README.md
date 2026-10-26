@@ -51,10 +51,11 @@ python3 serve.py      # preview at http://127.0.0.1:8000/
 ## 🎨 The homepage artwork
 
 The homepage is one journey west along the Silk Road, from Japan through China to Greece:
-a kitsune shrine, a dragon over ink mountains, and Pegasus. `myth.js` plays each scene as a loop
-while you read and scrubs the journeys between them with the scroll.
+a kitsune shrine, a dragon over ink mountains, and Pegasus. Three paintings sit behind the words,
+each cut into a few depth layers; `myth.js` lets the nearer layers drift a little while you read
+and fades softly from one painting to the next.
 
-- Site files: `assets/myth-film/` (scene loops, the journeys film, posters)
+- Site files: `assets/myth/` (the layers of the three paintings)
 - How they were made: `art/` — `gen.py` runs a job file from `art/jobs/` on fal.ai and logs its
-  cost in `art/ledger.csv`; `review.py` checks a video's loop seam and motion; `picks.md` records
+  cost in `art/ledger.csv`; `review.py` checks a video's loop seam and motion; `key.py` keys a green-screen loop; `picks.md` records
   which drafts were chosen. Drafts and reference images stay local (`art/out/`, `art/refs/` are ignored).

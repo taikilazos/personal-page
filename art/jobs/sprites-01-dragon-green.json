@@ -1,0 +1,25 @@
+{
+  "scene": "sprites",
+  "note": "Greenscreen test: the ink dragon alone on flat chroma green, to animate as a loop and key out for a layered page.",
+  "prompt": "Image 1 is a Chinese ink and blue-green landscape painting with a soft grey ink dragon. Paint ONLY that dragon, alone, in exactly the same style: soft grey ink brushwork on nothing, scales only hinted by light dry-brush strokes, flowing whiskers and mane, long serpentine body in a graceful S-curve, flying to the left, whole body visible with some margin around it. The background is a perfectly flat, uniform, pure chroma-key green (#00FF00) with no texture, no paper, no shading, no gradient, no clouds, no mist, no landscape, no shadow. The dragon has no green in it and no glow around it. No text, no border.",
+  "runs": [
+    {
+      "label": "dragon-green",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png",
+        "background": "opaque"
+      },
+      "est_cost_usd": 0.12
+    }
+  ]
+}

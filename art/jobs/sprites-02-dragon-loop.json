@@ -1,0 +1,50 @@
+{
+  "scene": "sprites",
+  "note": "Greenscreen test part 2: empty dragon plate (dragon removed) and the green-screen dragon animated as a 6 s loop.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "dragon-plate-empty",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/dragon-plate.jpg"
+      ],
+      "prompt": "Repaint only the masked (transparent) area: remove the ink dragon completely and paint what lies behind it: soft drifting mist, pale rice paper sky and the misty tops of the blue-green mountains, in exactly the same Chinese ink painting style, paper colour and texture, so the repaint is invisible. Keep everything outside the mask exactly unchanged. No dragon, no creatures, no text.",
+      "input": {
+        "mask_url": "file:refs/dragon-mask-nodragon.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    },
+    {
+      "label": "dragon-loop",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"Locked-off static camera, no camera movement, no zoom. A seamless 6-second loop.\",\n \"subject\": \"The soft grey ink dragon from the image, painted in Chinese ink brushwork.\",\n \"motion\": \"The dragon swims in place in the air: a slow wave travels along its body from head to tail, the coils rise and fall gently, the mane and whiskers ripple, the head turns slightly and returns. It stays in the same place in the frame and ends exactly as it started.\",\n \"background\": \"Perfectly flat uniform pure chroma-key green, unchanged in every frame: no texture, no shading, no shadow, no mist, no light, no particles.\",\n \"keep\": [\n  \"the same ink brushwork and colours as the image\",\n  \"the whole body inside the frame\"\n ],\n \"avoid\": [\n  \"3D look\",\n  \"glossy scales\",\n  \"anything appearing on the green\",\n  \"the dragon leaving the frame\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/dragon-green.png",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/dragon-green.png",
+            "frame_index": 144
+          }
+        ],
+        "duration": 6,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 7
+      },
+      "est_cost_usd": 0.44
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "scene": "sprites",
+  "note": "Retry: Pegasus with clearly visible leg pawing and rippling mane/tail, wings mostly still.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "pegasus-legs2",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"Locked-off static camera, no camera movement, no zoom. A seamless 6-second loop.\",\n \"subject\": \"The white winged horse Pegasus from the image, a heroic oil painting.\",\n \"motion\": \"Pegasus rears in the air and paws with its front legs: the two raised front legs clearly kick and fold forward and back twice, like a horse rearing; the hind legs shift and kick once; the mane and tail stream and ripple strongly in the wind. The wings stay spread in the same place with only slight movement. The body stays in the same spot. It ends exactly as it started.\",\n \"background\": \"Perfectly flat uniform pure chroma-key green, unchanged in every frame: no texture, no shading, no shadow, no light, no particles.\",\n \"keep\": [\n  \"exactly the same oil painting style, colours and brushwork as the image\",\n  \"the whole horse inside the frame\"\n ],\n \"avoid\": [\n  \"wing flapping\",\n  \"3D look\",\n  \"glossy surfaces\",\n  \"anything appearing on the green\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/pegasus-green.png",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/pegasus-green.png",
+            "frame_index": 144
+          }
+        ],
+        "duration": 6,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 3
+      },
+      "est_cost_usd": 0.44
+    }
+  ]
+}

@@ -26,8 +26,8 @@ URL: https://taikilazos.github.io/personal-page
 - `blog/` — individual blog post pages
 - `styles.css` — global styles
 - `script.js` — global JS
-- `myth.js` — homepage artwork (scene loops + scroll-scrubbed journeys film)
-- `assets/` — PDFs, images, fonts, `myth-film/` videos
+- `myth.js` — homepage artwork (three layered paintings, gentle parallax, fades between them)
+- `assets/` — PDFs, images, fonts, `myth/` (layers of the three homepage paintings)
 - `art/` — how the artwork was generated (fal.ai jobs, cost ledger, picks)
 
 ## Conventions

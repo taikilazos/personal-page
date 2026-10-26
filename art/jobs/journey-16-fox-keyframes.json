@@ -1,0 +1,44 @@
+{
+  "scene": "journey",
+  "note": "Painted checkpoints for the fox-to-dragon journey (FLUX 3 Max keyframes): spirit fox running up the tunnel; the gate where the woodblock night meets the ink world.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "fox-run",
+      "prompt": "Image 1 is a Japanese shin-hanga woodblock print of a torii tunnel at night. Make a new print by the same hand, in exactly its style, colours and texture: flat woodblock colour, carved keylines, bokashi gradients, fine rain lines, washi paper grain, matte ink. The view is further up the same wet stone steps, inside the tunnel of vermilion torii, which now surround the frame on both sides. A white spirit fox with nine long tails runs up the steps away from the viewer, small in the middle distance, printed in flat ivory with fine keylines like the rest of the print; its tails trail soft golden light. Small round golden fox-fires float beside it. Far ahead, the end of the tunnel glows warm. No text, no signature, no border, no 3D, no glossy surfaces.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.12
+    },
+    {
+      "label": "fox-gate",
+      "prompt": "Image 1 is a Japanese shin-hanga woodblock print of a torii tunnel at night. Image 2 is a Chinese ink and blue-green landscape painting on rice paper. Make one picture: we stand near the end of the torii tunnel from image 1, painted in its woodblock style; the last vermilion torii frames the view. Through the last gate there is no more night: the opening is filled with pale rice paper on which the misty blue-green ink mountains of image 2 are appearing, still half painted, as if a brush is painting them right now. The white nine-tailed spirit fox leaps through the gate into that paper world; its golden tail light turns into one long sweeping black ink brushstroke that curls into the mountains. The woodblock print at the edges and the ink painting in the gate meet at the frame of the torii. No text, no signature, no border, no 3D, no glossy surfaces.",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg",
+        "refs/dragon-final-still.jpg"
+      ],
+      "input": {
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.14
+    }
+  ]
+}

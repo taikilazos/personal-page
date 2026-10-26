@@ -1,0 +1,71 @@
+{
+  "scene": "journey",
+  "note": "FLUX 3 Max keyframes-to-video: the fox-to-dragon journey in one 12 s pass through 4 painted keyframes (shrine, fox running, fox leaping through the last gate, ink world).",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "flux-k2d-7",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"One continuous 12-second camera journey up the shrine steps, slow and dreamlike, through four paintings given as keyframes. Every frame is a hand-made painting.\",\n \"subject\": \"A white spirit fox with nine long tails trailing golden light, and small round golden fox-fire orbs.\",\n \"timeline\": [\n  {\n   \"seconds\": \"0-4\",\n   \"motion\": \"In the rainy night shrine the golden fox-fires gather on the steps; the white nine-tailed spirit fox appears and runs up the steps away from us; the camera follows it into the tunnel of vermilion torii, the gates gliding past on both sides.\"\n  },\n  {\n   \"seconds\": \"4-8\",\n   \"motion\": \"The camera keeps climbing behind the fox toward the warm glow at the end of the tunnel; at the last gate the opening fills with pale rice paper and the fox leaps through it, its golden tail light turning into one long sweeping black ink brushstroke.\"\n  },\n  {\n   \"seconds\": \"8-12\",\n   \"motion\": \"The camera passes through the gate; the brushstroke curls outward and paints the misty blue-green ink mountains, the dragon, the pagoda and the plum blossom into being; the woodblock night is gone and the Chinese ink painting fills the whole frame.\"\n  }\n ],\n \"style\": \"Starts as a Japanese shin-hanga woodblock print (flat colour, carved keylines, bokashi gradients, fine rain lines, washi grain); ends as a Chinese ink and blue-green shan shui painting on aged rice paper. The change happens through the gate and the brushstroke, never as a crossfade.\",\n \"keep\": [\n  \"the fox printed in flat ivory with fine keylines, as in the keyframes\",\n  \"matte painted surfaces in every frame\",\n  \"the same torii and stone fox statues as in the first keyframe\"\n ],\n \"avoid\": [\n  \"glossy or plastic surfaces\",\n  \"3D rendered look\",\n  \"photographic realism\",\n  \"double exposure of two scenes\",\n  \"text or watermarks\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/kitsune-final-still.jpg",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/fox-run.jpg",
+            "frame_index": 84
+          },
+          {
+            "image_url": "upload:refs/fox-gate.jpg",
+            "frame_index": 192
+          },
+          {
+            "image_url": "upload:refs/dragon-final-still.jpg",
+            "frame_index": 288
+          }
+        ],
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 7
+      },
+      "est_cost_usd": 0.87
+    },
+    {
+      "label": "flux-k2d-23",
+      "endpoint": "blackforestlabs/flux-3-max/keyframes-to-video",
+      "prompt": "{\n \"shot\": \"One continuous 12-second camera journey up the shrine steps, slow and dreamlike, through four paintings given as keyframes. Every frame is a hand-made painting.\",\n \"subject\": \"A white spirit fox with nine long tails trailing golden light, and small round golden fox-fire orbs.\",\n \"timeline\": [\n  {\n   \"seconds\": \"0-4\",\n   \"motion\": \"In the rainy night shrine the golden fox-fires gather on the steps; the white nine-tailed spirit fox appears and runs up the steps away from us; the camera follows it into the tunnel of vermilion torii, the gates gliding past on both sides.\"\n  },\n  {\n   \"seconds\": \"4-8\",\n   \"motion\": \"The camera keeps climbing behind the fox toward the warm glow at the end of the tunnel; at the last gate the opening fills with pale rice paper and the fox leaps through it, its golden tail light turning into one long sweeping black ink brushstroke.\"\n  },\n  {\n   \"seconds\": \"8-12\",\n   \"motion\": \"The camera passes through the gate; the brushstroke curls outward and paints the misty blue-green ink mountains, the dragon, the pagoda and the plum blossom into being; the woodblock night is gone and the Chinese ink painting fills the whole frame.\"\n  }\n ],\n \"style\": \"Starts as a Japanese shin-hanga woodblock print (flat colour, carved keylines, bokashi gradients, fine rain lines, washi grain); ends as a Chinese ink and blue-green shan shui painting on aged rice paper. The change happens through the gate and the brushstroke, never as a crossfade.\",\n \"keep\": [\n  \"the fox printed in flat ivory with fine keylines, as in the keyframes\",\n  \"matte painted surfaces in every frame\",\n  \"the same torii and stone fox statues as in the first keyframe\"\n ],\n \"avoid\": [\n  \"glossy or plastic surfaces\",\n  \"3D rendered look\",\n  \"photographic realism\",\n  \"double exposure of two scenes\",\n  \"text or watermarks\"\n ]\n}",
+      "input": {
+        "keyframes": [
+          {
+            "image_url": "upload:refs/kitsune-final-still.jpg",
+            "frame_index": 0
+          },
+          {
+            "image_url": "upload:refs/fox-run.jpg",
+            "frame_index": 84
+          },
+          {
+            "image_url": "upload:refs/fox-gate.jpg",
+            "frame_index": 192
+          },
+          {
+            "image_url": "upload:refs/dragon-final-still.jpg",
+            "frame_index": 288
+          }
+        ],
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "reasoning_level": "high",
+        "seed": 23
+      },
+      "est_cost_usd": 0.87
+    }
+  ]
+}

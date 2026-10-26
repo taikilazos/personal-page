@@ -26,10 +26,46 @@
     <main class="main">
         <section class="myth">
             <div class="myth-stage" data-tone="dark" aria-hidden="true">
-                <video class="myth-film" data-src="assets/myth-film/journeys.mp4" data-src-small="assets/myth-film/journeys-small.mp4" poster="assets/myth-film/kitsune.jpg" muted playsinline preload="auto"></video>
-                <video class="myth-loop is-on" data-src="assets/myth-film/kitsune.mp4" data-src-small="assets/myth-film/kitsune-small.mp4" poster="assets/myth-film/kitsune.jpg" muted loop playsinline preload="auto"></video>
-                <video class="myth-loop" data-src="assets/myth-film/dragon.mp4" data-src-small="assets/myth-film/dragon-small.mp4" poster="assets/myth-film/dragon.jpg" muted loop playsinline preload="none"></video>
-                <video class="myth-loop" data-src="assets/myth-film/pegasus.mp4" data-src-small="assets/myth-film/pegasus-small.mp4" poster="assets/myth-film/pegasus.jpg" muted loop playsinline preload="none"></video>
+                <div class="myth-scene">
+                    <div class="myth-rig" data-focus="0.6" data-focus-tall="0.72">
+                        <img class="myth-part" src="assets/myth/kitsune/painting.jpg" alt="">
+                        <div class="myth-part myth-mist myth-mist-night"></div>
+                        <div class="myth-part myth-lights">
+                            <i class="lamp" style="left:52.4%;top:62%;width:13%"></i>
+                            <i class="lamp" style="left:63.2%;top:42%"></i>
+                            <i class="lamp" style="left:80.6%;top:41.1%"></i>
+                            <i class="orb" style="left:68.3%;top:76.1%"></i>
+                            <i class="orb" style="left:79.5%;top:63%"></i>
+                            <i class="orb" style="left:76%;top:54.2%"></i>
+                            <i class="orb orb-far" style="left:72.8%;top:48.1%"></i>
+                            <i class="orb orb-far" style="left:71%;top:44.9%"></i>
+                            <i class="orb orb-far" style="left:74.4%;top:66%"></i>
+                        </div>
+                    </div>
+                    <canvas class="myth-fx" data-fx="rain"></canvas>
+                </div>
+                <div class="myth-scene">
+                    <div class="myth-rig" data-focus="0.6" data-focus-tall="0.62">
+                        <img class="myth-part" loading="lazy" src="assets/myth/dragon/back.jpg" alt="">
+                        <div class="myth-part myth-ink">
+                            <video class="myth-creature" style="left:40%;top:1%;width:50%" muted loop playsinline preload="none" poster="assets/myth/dragon/dragon.webp" data-src="assets/myth/dragon/dragon"></video>
+                        </div>
+                        <div class="myth-part myth-mist myth-mist-paper"></div>
+                        <img class="myth-part" loading="lazy" src="assets/myth/dragon/front.webp" alt="">
+                    </div>
+                    <canvas class="myth-fx" data-fx="petals"></canvas>
+                </div>
+                <div class="myth-scene">
+                    <div class="myth-rig" data-focus="0.6" data-focus-tall="0.7">
+                        <img class="myth-part" loading="lazy" src="assets/myth/pegasus/painting.jpg" alt="">
+                        <div class="myth-part">
+                            <video class="myth-creature" style="left:32.3%;top:2.6%;width:76%" muted loop playsinline preload="none" poster="assets/myth/pegasus/horse.webp" data-src="assets/myth/pegasus/horse"></video>
+                        </div>
+                        <div class="myth-part myth-sun"></div>
+                        <img class="myth-part" data-drop="0.34" loading="lazy" src="assets/myth/pegasus/clouds.webp" alt="">
+                    </div>
+                    <canvas class="myth-fx" data-fx="sky"></canvas>
+                </div>
                 <div class="myth-scrim"></div>
             </div>
 
@@ -56,7 +92,7 @@
                     </div>
                 </section>
 
-                <section class="chapter chapter-journey" aria-hidden="true"></section>
+                <section class="chapter chapter-gap" aria-hidden="true"></section>
 
                 <section class="chapter chapter-light">
                     <div class="container">
@@ -69,7 +105,7 @@
                     </div>
                 </section>
 
-                <section class="chapter chapter-journey" aria-hidden="true"></section>
+                <section class="chapter chapter-gap" aria-hidden="true"></section>
 
                 <section class="chapter">
                     <div class="container">

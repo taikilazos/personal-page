@@ -69,6 +69,18 @@ def upload(path):
     return init["file_url"]
 
 
+def resolve(value):
+    if isinstance(value, dict):
+        return {k: resolve(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [resolve(v) for v in value]
+    if isinstance(value, str) and value.startswith("file:"):
+        return data_uri(value[5:])
+    if isinstance(value, str) and value.startswith("upload:"):
+        return upload(value[7:])
+    return value
+
+
 def outputs(result):
     """The media URLs in a fal result, whatever the model calls them."""
     found = []
@@ -118,12 +130,9 @@ def main():
         payload = {"prompt": " ".join(filter(None, [job["prompt"], r.get("prompt")])), **r["input"]}
         if r.get("refs"):
             payload["image_urls"] = [data_uri(p) for p in r["refs"]]
-        # single-image fields (first/last frame) can point at a local file as "file:<path>"
-        for k, v in list(payload.items()):
-            if isinstance(v, str) and v.startswith("file:"):
-                payload[k] = data_uri(v[5:])
-            elif isinstance(v, str) and v.startswith("upload:"):
-                payload[k] = upload(v[7:])
+        # image fields anywhere in the input (first/last frame, keyframe lists) can point at a
+        # local file as "file:<path>" (inlined) or "upload:<path>" (put on fal storage)
+        payload = resolve(payload)
         print(f"→ {r['label']}  ({r['endpoint']}, est ${r['est_cost_usd']:.2f})", flush=True)
         rid, result = run(r["endpoint"], payload)
         record = {**payload, **r["input"]}             # keep file paths, not inlined image data

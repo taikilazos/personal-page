@@ -1,0 +1,26 @@
+{
+  "scene": "kitsune",
+  "note": "Remove the painted fox-fire orbs from the shrine so code-drawn ones can float freely without doubles.",
+  "prompt": "",
+  "runs": [
+    {
+      "label": "no-orbs",
+      "endpoint": "openai/gpt-image-2.5/sunburst/edit",
+      "refs": [
+        "refs/kitsune-final-still.jpg"
+      ],
+      "prompt": "Repaint only the masked (transparent) areas: remove the small glowing golden orbs floating over the stone steps, and paint what lies behind them: the same dark wet stone steps with their faint reflections, in exactly the same woodblock print style, colours and texture, so the repaint is invisible. No glow, no orbs, no lights in the repainted areas. Keep everything outside the masked areas exactly unchanged. No text.",
+      "input": {
+        "mask_url": "file:refs/kitsune-mask-orbs.png",
+        "image_size": {
+          "width": 1920,
+          "height": 1088
+        },
+        "quality": "high",
+        "num_images": 2,
+        "output_format": "png"
+      },
+      "est_cost_usd": 0.13
+    }
+  ]
+}
